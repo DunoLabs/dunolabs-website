@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           Welcome to DunoLabs !
         </Heading>
         <Text as="p" fontSize="lg" pb={"5"}>
-          DunoLabs' mission is to develop open-source micro-saas applications
+          DunoLabs mission is to develop open-source micro-saas applications
           using various technologies to help businesses & individuals. we cover
           all the aspects by providing a wonderful cross-platform user
           experience.
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           About
         </Heading>
         <Text as="p" fontSize="lg" pb={"5"}>
-          Founded in April 2022, DunoLabs' plan is to develop micro-saas
+          Founded in April 2022, DunoLabs plan is to develop micro-saas
           applications across multiple domains. DunoLabs teams up a community of
           experts to develop open-source software that enables users to
           accomplish tasks quickly and easily. The main goal is to provide a
@@ -84,8 +84,8 @@ const Home: NextPage = () => {
         </Center>
         <Stack padding={"3"} mt={"5rem"} bg="yellow.100" rounded={"xl"}>
           <Text fontWeight={"500"}>
-            This is a demo website for the Dunolabs. we're currently working on
-            our main website.
+            This is a demo website for the Dunolabs. we&apos;re currently
+            working on our main website.
           </Text>
         </Stack>
       </VStack>
