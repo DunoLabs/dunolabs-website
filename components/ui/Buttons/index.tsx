@@ -19,6 +19,8 @@ const buttonVariants = cva(
         ghost:
           "bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-800 dark:text-zinc-100 dark:hover:text-zinc-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent",
         link: "bg-transparent dark:bg-transparent underline-offset-4 hover:underline text-zinc-900 dark:text-zinc-100 hover:bg-transparent dark:hover:bg-transparent",
+        white:
+          "bg-white text-zinc-900 hover:bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-100",
       },
       size: {
         default: "h-10 py-2 px-4",
@@ -50,3 +52,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 export default Button;
+

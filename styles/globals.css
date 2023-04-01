@@ -18,3 +18,13 @@
     url("/public/fonts/OTF/Satoshi-MediumItalic.otf") format("opentype"),
     url("/public/fonts/OTF/Satoshi-Regular.otf") format("opentype");
 }
+
+body {
+
+  background-color: #f7f6f2
+}
+
+::selection {
+  background-color: #000;
+  color: #fff;
+}
