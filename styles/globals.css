@@ -1,16 +1,29 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/public/fonts/OTF/Satoshi-Black.otf") format("opentype"),
+    url("/public/fonts/OTF/Satoshi-BlackItalic.otf") format("opentype"),
+    url("/public/fonts/OTF/Satoshi-Bold.otf") format("opentype"),
+    url("/public/fonts/OTF/Satoshi-BoldItalic.otf") format("opentype"),
+    url("/public/fonts/OTF/Satoshi-Italic.otf") format("opentype"),
+    url("/public/fonts/OTF/Satoshi-Light.otf") format("opentype"),
+    url("/public/fonts/OTF/Satoshi-LightItalic.otf") format("opentype"),
+    url("/public/fonts/OTF/Satoshi-Medium.otf") format("opentype"),
+    url("/public/fonts/OTF/Satoshi-MediumItalic.otf") format("opentype"),
+    url("/public/fonts/OTF/Satoshi-Regular.otf") format("opentype");
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f7f6f2;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+::selection {
+  background-color: #000;
+  color: #fff;
 }
