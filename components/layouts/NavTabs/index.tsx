@@ -36,29 +36,29 @@ const menu: MenuCategory[] = [
     title: "People",
     href: "/people",
   },
-  {
-    title: "Work",
-    submenu: [
-      {
-        title: "Web Development",
-        href: "/services/web-dev",
-        description:
-          "A modal dialog that interrupts the user with important content and expects a response.",
-      },
-      {
-        title: "Mobile Development",
-        href: "/services/mobile-dev",
-        description:
-          "A modal dialog that interrupts the user with important content and expects a response.",
-      },
-      {
-        title: "UI/UX Design",
-        href: "/services/ui-ux-design",
-        description:
-          "A modal dialog that interrupts the user with important content and expects a response.",
-      },
-    ],
-  },
+  // {
+  //   title: "Work",
+  //   submenu: [
+  //     {
+  //       title: "Web Development",
+  //       href: "/services/web-dev",
+  //       description:
+  //         "A modal dialog that interrupts the user with important content and expects a response.",
+  //     },
+  //     {
+  //       title: "Mobile Development",
+  //       href: "/services/mobile-dev",
+  //       description:
+  //         "A modal dialog that interrupts the user with important content and expects a response.",
+  //     },
+  //     {
+  //       title: "UI/UX Design",
+  //       href: "/services/ui-ux-design",
+  //       description:
+  //         "A modal dialog that interrupts the user with important content and expects a response.",
+  //     },
+  //   ],
+  // },
   {
     title: "Contact",
     href: "/contact",

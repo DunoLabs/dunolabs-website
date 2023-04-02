@@ -1,18 +1,18 @@
 import Button from "@/components/ui/Buttons";
 import { NavTabs } from "@/components/layouts/NavTabs";
 import { ArrowUpRight } from "lucide-react";
-import ViewContainer from "../ViewContainer";
 import Fixed from "@/lib/Fixed";
+import ViewContainer from "../ViewContainer";
 
 const Header = () => {
   return (
-    <Fixed top={0} left={0} right={0}>
+    <Fixed>
       <ViewContainer>
-        <div className="px-4 mx-auto my-4 rounded-full sm:px-6 lg:px-8 bg-zinc-900">
-          <div className="flex items-center justify-between h-16">
+        <div className="px-4 mx-auto my-4 rounded-full w-100 sm:px-6 lg:px-8 bg-primary">
+          <div className="flex items-center justify-between h-16 ">
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <div className="flex items-center gap-4">
-                <a href="/" className="font-semibold text-md text-zinc-50">
+                <a href="/" className="font-semibold text-md text-zinc-200">
                   dunolabs
                 </a>
               </div>
@@ -27,7 +27,7 @@ const Header = () => {
                 <div className="sm:flex sm:gap-4">
                   <div>
                     <Button
-                      variant="white"
+                      variant="secondary"
                       size="sm"
                       className="px-4 rounded-full"
                     >

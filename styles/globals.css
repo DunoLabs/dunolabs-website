@@ -19,11 +19,7 @@
     url("/public/fonts/OTF/Satoshi-Regular.otf") format("opentype");
 }
 
-body {
-  background-color: #f7f6f2;
-}
-
 ::selection {
-  background-color: #000;
-  color: #fff;
+  background-color: #f1b7ff;
+  color: #000;
 }

@@ -1,25 +1,24 @@
+import Fixed from "@/lib/Fixed";
 import ScreenCenter from "../ScreenCenter";
 import ViewContainer from "../ViewContainer";
 
 const Hero = () => {
   return (
-    <ViewContainer>
-      <ScreenCenter className="items-start">
-        <h1>
-          <span className="text-2xl font-semibold tracking-wide text-gray-500 uppercase">
-            We are Dunolabs & WE
-          </span>
-        </h1>
-        <h1 className="text-xl font-extrabold sm:text-5xl">
-          Design ✦ Develop ✦ Market{" "}
+    <ScreenCenter className="items-start bg-secondary text-primary">
+      <ViewContainer>
+        <h4 className="text-2xl font-extrabold sm:text-4xl">WE</h4>
+        <h1 className="text-xl font-extrabold sm:text-7xl">
+          Design <span>✦</span> Develop <span className="color">✦</span> Market
         </h1>
 
-        <p className="mt-4 sm:text-xl sm:leading-relaxed">
+        <h2 className="text-xl font-extrabold sm:text-9xl">Your Business !</h2>
+
+        <p className="mt-4 font-bold sm:text-xl sm:leading-relaxed text-primary">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
           illo tenetur fuga ducimus numquam ea!
         </p>
-      </ScreenCenter>
-    </ViewContainer>
+      </ViewContainer>
+    </ScreenCenter>
   );
 };
 
