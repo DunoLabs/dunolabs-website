@@ -73,9 +73,7 @@ export function NavTabs() {
           <NavigationMenuItem key={item.title}>
             {item.submenu ? (
               <>
-                <NavigationMenuTrigger className="my-3">
-                  {item.title}
-                </NavigationMenuTrigger>
+                <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]  ">
                     {item.submenu.map((subItem) => (
@@ -114,7 +112,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-color focus:bg-zinc-900 hover:bg-zinc-100",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-color focus:bg-zinc-900 ",
             className
           )}
           {...props}

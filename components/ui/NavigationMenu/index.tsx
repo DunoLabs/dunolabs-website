@@ -41,7 +41,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyle = cva(
-  "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none  disabled:opacity-50 dark:focus:bg-zinc-800 disabled:pointer-events-none dark:text-zinc-100 dark:data-[state=open]:bg-zinc-800 data-[active]:bg-zinc-50 dark:data-[active]:bg-zinc-800 h-10 py-2 px-4 group w-max mx-2 text-white "
+  "inline-flex items-center justify-center rounded-md text-xl font-medium transition-colors focus:outline-none  disabled:opacity-50 dark:focus:bg-zinc-800 disabled:pointer-events-none dark:text-zinc-100 dark:data-[state=open]:bg-zinc-800 data-[active]:bg-zinc-50 dark:data-[active]:bg-zinc-800 h-10 py-2 px-4 w-max mx-2 text-primary hover:underline underline-offset-4"
 );
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -50,7 +50,9 @@ const NavigationMenuTrigger = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
     ref={ref}
-    className={cn(navigationMenuTriggerStyle(), "group", className)}
+    className={
+      cn(navigationMenuTriggerStyle(), className) + " underline-custom"
+    }
     {...props}
   >
     {children}{" "}
@@ -109,7 +111,7 @@ const NavigationMenuIndicator = React.forwardRef<
     )}
     {...props}
   >
-    <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-zinc-200 shadow-md dark:bg-zinc-800" />
+    <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-primary shadow-md " />
   </NavigationMenuPrimitive.Indicator>
 ));
 NavigationMenuIndicator.displayName =

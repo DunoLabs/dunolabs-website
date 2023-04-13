@@ -13,10 +13,6 @@ module.exports = {
       fontFamily: {
         satoshi: ["Satoshi", "sans-serif"],
       },
-      colors: {
-        primary: "#F7323F",
-        secondary: "#f1b7ff",
-      },
     },
   },
   variants: {},

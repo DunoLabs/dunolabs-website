@@ -1,21 +1,18 @@
 import Fixed from "@/lib/Fixed";
-import ScreenCenter from "../ScreenCenter";
-import ViewContainer from "../ViewContainer";
+import ScreenCenter from "@/components/layouts/ScreenCenter";
+import ViewContainer from "@/components/layouts/ViewContainer";
 
 const Hero = () => {
   return (
-    <ScreenCenter className="items-start bg-secondary text-primary">
+    <ScreenCenter className="my-10">
       <ViewContainer>
-        <h4 className="text-2xl font-extrabold sm:text-4xl">WE</h4>
-        <h1 className="text-xl font-extrabold sm:text-7xl">
-          Design <span>✦</span> Develop <span className="color">✦</span> Market
-        </h1>
+        <h2 className="my-10 text-xl font-extrabold sm:text-9xl text-blue text-border">
+          Design-driven development of your web product
+        </h2>
 
-        <h2 className="text-xl font-extrabold sm:text-9xl">Your Business !</h2>
-
-        <p className="mt-4 font-bold sm:text-xl sm:leading-relaxed text-primary">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-          illo tenetur fuga ducimus numquam ea!
+        <p className="mt-4 font-bold sm:text-xl sm:leading-relaxed ">
+          We are a team of passionate designers and developers who can help you
+          build your business.
         </p>
       </ViewContainer>
     </ScreenCenter>
@@ -23,4 +20,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
