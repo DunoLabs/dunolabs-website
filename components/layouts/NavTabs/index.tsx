@@ -37,7 +37,7 @@ const menu: MenuCategory[] = [
     href: "/people",
   },
   // {
-  //   title: "Work",
+  //   title: "work",
   //   submenu: [
   //     {
   //       title: "Web Development",
@@ -75,7 +75,7 @@ export function NavTabs() {
               <>
                 <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]  ">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] text-sm ">
                     {item.submenu.map((subItem) => (
                       <ListItem
                         key={subItem.title}
