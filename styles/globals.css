@@ -21,10 +21,12 @@
 
 body {
   text-transform: lowercase;
-
-
 }
 
+::selection {
+  background-color: #f8f8f8;
+  color: #000;
+}
 
 .marquee {
   --space: 4rem;
@@ -35,7 +37,6 @@ body {
   overflow: hidden;
   user-select: none;
   gap: var(--gap);
-
 }
 
 @media only screen and (max-width: 767px) {
@@ -70,7 +71,6 @@ body {
   }
 }
 
-
 /* Underline */
 
 .underline-custom:after {
@@ -80,7 +80,6 @@ body {
   bottom: -4px;
   width: 100%;
   height: 2px;
-  background-color: #fff;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.75s ease-in-out;
@@ -94,4 +93,10 @@ body {
 
 .text-border {
   -webkit-text-stroke: 2px #fff;
+}
+
+.custom-cursor {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }

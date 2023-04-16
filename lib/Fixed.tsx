@@ -46,4 +46,3 @@ const Fixed: React.FC<FixedProps> = ({
 };
 
 export default Fixed;
-

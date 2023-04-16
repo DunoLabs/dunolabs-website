@@ -6,12 +6,12 @@ const Hero = () => {
     <ScreenCenter className="mt-24">
       <ViewContainer>
         <h2 className="my-10 text-6xl font-extrabold sm:text-9xl text-blue">
-          we design develop & market your product ;
+          we design, develop & market your product ;
         </h2>
-        <p className="w-2/3 my-20 text-lg font-medium sm:text-2xl text-gray">
-          we manage your project from start to finish, we design, develop and
-          market your product.
-        </p>
+        <p className="w-2/3 my-20 text-lg sm:text-2xl text-gray ">
+          we are a team of passionate developers and designers who are dedicated
+          to creating the best possible user experience for our clients.
+        </p>{" "}
       </ViewContainer>
     </ScreenCenter>
   );

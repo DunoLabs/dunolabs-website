@@ -3,14 +3,18 @@ import { cn } from "@/lib/utils";
 interface Props {
   text: string;
   className?: string;
+  seperator?: string;
 }
 
-const Marquee: React.FC<Props> = ({ text, className = "text-black" }) => {
-  const span = "✦";
+const Marquee: React.FC<Props> = ({
+  text,
+  className = "text-zinc-900",
+  seperator = "✦",
+}) => {
   return (
-    <div className={cn("border-y-4 marquee border-zinc-900 ", className)}>
-      <div className="py-4 font-medium uppercase marquee__group ">
-        {text.concat(" ", span, " ").repeat(25)}
+    <div className={cn(" marquee", className)}>
+      <div className="py-4 font-medium uppercase marquee__group">
+        {text.concat(" ", seperator, " ").repeat(25)}
       </div>
     </div>
   );
