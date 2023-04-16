@@ -6,6 +6,7 @@ import OurServices from "@/components/layouts/Services";
 
 import Marquee from "@/components/ui/Marquee";
 import FAQ from "@/components/layouts/FAQ";
+import Footer from "@/components/layouts/Footer";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Marquee text="Contact us Now" className="bg-zinc-900 text-zinc-50 " />
       <FAQ />
       <CTA />
+      <Footer />
     </>
   );
 };
