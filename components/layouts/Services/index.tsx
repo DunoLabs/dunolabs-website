@@ -68,8 +68,8 @@ const OurServices: React.FC = () => {
                 collapsible
                 className="w-[16rem] sm:w-[28rem]"
               >
-                {OurServicesList.map((item) => (
-                  <AccordionItem value={item.item} className="py-3">
+                {OurServicesList.map((item, index) => (
+                  <AccordionItem value={item.item} className="py-3" key={index}>
                     <AccordionTrigger className="text-xl uppercase hover:no-underline">
                       {item.title}
                     </AccordionTrigger>
@@ -88,3 +88,4 @@ const OurServices: React.FC = () => {
 };
 
 export default OurServices;
+

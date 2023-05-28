@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
       <ViewContainer>
         <Separator />
 
-        <div className="flex flex-wrap items-center justify-center w-full h-full my-5 sm:justify-between sm:w-1/4">
+        {/* <div className="flex flex-wrap items-center justify-center w-full h-full my-5 sm:justify-between sm:w-1/4">
           {FooterLinks.map((link) => (
             <Link
               href={link.link}
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
               {link.title}
             </Link>
           ))}
-        </div>
+        </div> */}
         <div className="flex flex-wrap items-center justify-center w-full h-full mt-4 sm:justify-between">
           <p className="mt-5">
             <span className="text-lg text-zinc-50 sm:text-lg text-gray">
@@ -61,3 +61,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+

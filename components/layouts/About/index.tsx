@@ -23,10 +23,10 @@ const About: React.FC = () => {
       <ViewContainer>
         <div className="absolute  flex items-center py-4 text-zinc-50 rounded-full -top-[2.2rem] ">
           <Button
-            className="left-0 p-4 text-zinc-50 rounded-full bg-zinc-900"
+            className="left-0 p-4 rounded-full text-zinc-50 bg-zinc-900"
             border={"borderLight"}
           >
-            LET'S FIND OUT MORE ABOUT US
+            LET&apos;S FIND OUT MORE ABOUT US
           </Button>
         </div>
         <div className="items-center justify-center w-full h-full ">
@@ -59,7 +59,7 @@ const About: React.FC = () => {
             <span className="text-zinc-50 ">2023</span>
             <Separator className="mx-3" />
             <span className="italic font-semibold text-zinc-50 text-end">
-              the more you fuck around, the more you're gonna find out !!
+              the more you fuck around, the more you&apos;re gonna find out !!
             </span>
           </div>
         </div>
@@ -67,4 +67,6 @@ const About: React.FC = () => {
     </div>
   );
 };
+
 export default About;
+

@@ -70,28 +70,33 @@ const People: React.FC = () => {
             <div className="max-w-3xl">
               <p className="mt-10">
                 <span className="text-lg sm:text-xl text-gray">
-                  we believe that there's more to a great company than just
-                  flashy perks. Instead of playing HR bingo, we're focused on
-                  delivering real value to our clients. Our team is passionate
-                  about creating digital solutions that solve real-world
-                  problems and help our clients achieve their goals. We take the
-                  time to understand our clients' unique needs and work closely
-                  with them to deliver solutions that meet those needs.
+                  we believe that there&apos;s more to a great company than just
+                  flashy perks. Instead of playing HR bingo, we&apos;re focused
+                  on delivering real value to our clients. Our team is
+                  passionate about creating digital solutions that solve
+                  real-world problems and help our clients achieve their goals.
+                  We take the time to understand our clients&apos; unique needs
+                  and work closely with them to deliver solutions that meet
+                  those needs.
                 </span>
               </p>
               <p className="mt-10">
                 <span className="text-lg sm:text-xl text-gray">
-                  We believe that our success is tied to our clients' success,
-                  which is why we're dedicated to building long-term
-                  relationships based on trust, transparency, and collaboration.
-                  Whether you're a startup or a Fortune 500 company, we're here
-                  to help you achieve your goals and take your digital product
-                  to the next level. Choose Dunolabs for digital solutions that
-                  truly make a difference.
+                  We believe that our success is tied to our clients&apos;
+                  success, which is why we&apos;re dedicated to building
+                  long-term relationships based on trust, transparency, and
+                  collaboration. Whether you&apos;re a startup or a Fortune 500
+                  company, we&apos;re here to help you achieve your goals and
+                  take your digital product to the next level. Choose Dunolabs
+                  for digital solutions that truly make a difference.
                 </span>
               </p>{" "}
             </div>
-            <Button variant={"white"} className="mt-10 rounded-full">
+            <Button
+              variant={"white"}
+              className="mt-10 rounded-full"
+              href="https://www.notion.so/wh0sumit/work-dunolabs-e0dbc9782fda45208ed9ab23d9227dc7"
+            >
               we are hiring / apply now
             </Button>
           </HeadingBanner>
@@ -107,9 +112,10 @@ const People: React.FC = () => {
             <div className="max-w-3xl">
               <p className="mt-10">
                 <span className="text-lg sm:text-xl text-gray">
-                  You only have one life (unless you're a cat), so there's no
-                  need to spend your entire week working if you don't want to.
-                  The amount of time you choose to work is entirely up to you.
+                  You only have one life (unless you&apos;re a cat), so
+                  there&apos;s no need to spend your entire week working if you
+                  don&apos;t want to. The amount of time you choose to work is
+                  entirely up to you.
                 </span>
               </p>
             </div>
@@ -120,7 +126,10 @@ const People: React.FC = () => {
               {
                 /// add only odd cards
                 CardData.filter((_, index) => index % 2 === 0).map((card) => (
-                  <Card className="w-9/12 mb-48 border-none shadow-none">
+                  <Card
+                    className="w-9/12 mb-48 border-none shadow-none"
+                    key={card.id}
+                  >
                     <CardHeader>
                       <CardId>{card.id}</CardId>
                       <CardTitle className="mb-3 text-3xl ">
@@ -140,7 +149,10 @@ const People: React.FC = () => {
               {
                 /// add only even cards
                 CardData.filter((_, index) => index % 2 !== 0).map((card) => (
-                  <Card className="w-9/12 mt-48 border-none shadow-none">
+                  <Card
+                    className="w-9/12 mt-48 border-none shadow-none"
+                    key={card.id}
+                  >
                     <CardHeader>
                       <CardId>{card.id}</CardId>
                       <CardTitle className="mb-3 text-3xl ">
@@ -160,12 +172,20 @@ const People: React.FC = () => {
           <HeadingBanner
             title="No vacancy in the list that fits your needs?"
             className="max-w-3xl mt-10 text-zinc-900"
+            links={[
+              {
+                href: "https://www.notion.so/wh0sumit/work-dunolabs-e0dbc9782fda45208ed9ab23d9227dc7",
+                text: "dunolabs / notion workpage",
+                linkVariant: "linkDark",
+              },
+            ]}
           >
             <div className="max-w-3xl">
               <p className="mt-10">
                 <span className="text-lg sm:text-xl text-gray">
-                  It’s a pity, but of course, you can send us your speculative
-                  application to dunolabs@gmail.com
+                  It&apos;s a pity, but of course, you can send us your
+                  speculative application to dunolabs@gmail.com or apply via our
+                  work page :
                 </span>
               </p>
             </div>
@@ -179,3 +199,4 @@ const People: React.FC = () => {
 };
 
 export default People;
+

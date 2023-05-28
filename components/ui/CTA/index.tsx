@@ -1,5 +1,4 @@
 import ViewContainer from "@/components/layouts/ViewContainer";
-
 import HeadingBanner from "@/components/ui/HeadingBanner";
 
 const CTA: React.FC = () => {
@@ -22,24 +21,24 @@ const CTA: React.FC = () => {
               <span className="text-lg sm:text-xl text-gray">
                 we specialize in building human-centered systems that solve
                 real-world problems. We understand that you know your customers
-                and industry best, and that's why we believe in collaborating
-                with you to create digital products that truly resonate with
-                your target audience.
+                and industry best, and that&apos;s why we believe in
+                collaborating with you to create digital products that truly
+                resonate with your target audience.
               </span>
             </p>
             <p className="mt-10">
               <span className="text-lg sm:text-xl text-gray">
                 Whether you have a specific project in mind or just a rough
-                idea, we would love to hear from you. So, if you're ready to
-                take your digital product to the next level, drop us a line and
-                tell us your idea.
+                idea, we would love to hear from you. So, if you&apos;re ready
+                to take your digital product to the next level, drop us a line
+                and tell us your idea.
               </span>
             </p>
 
             <p className="mt-10">
               <span className="text-lg sm:text-xl text-gray">
-                By the way: If you would like to talk to us in Hindi, that’s
-                fine. We do speak Hindi too.
+                By the way: If you would like to talk to us in Hindi,
+                that&apos;s fine. We do speak Hindi too.
               </span>
             </p>
           </div>
@@ -50,3 +49,4 @@ const CTA: React.FC = () => {
 };
 
 export default CTA;
+

@@ -35,8 +35,8 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
       </p>
       {children}
       {links &&
-        links.map((link) => (
-          <div className="mt-10">
+        links.map((link, index) => (
+          <div className="mt-10" key={index}>
             <Link
               key={link.href}
               href={link.href}
@@ -52,3 +52,4 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
 };
 
 export default HeadingBanner;
+

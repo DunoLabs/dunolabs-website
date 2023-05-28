@@ -1,10 +1,9 @@
 import * as React from "react";
 import { VariantProps, cva } from "class-variance-authority";
-
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none  dark:hover:bg-zinc-800 dark:hover:text-zinc-100 disabled:opacity-50 dark:focus:ring-zinc-400 disabled:pointer-events-none dark:focus:ring-offset-zinc-900 data-[state=open]:bg-zinc-100 dark:data-[state=open]:bg-zinc-800 transition duration-300 ease-in-out hover:scale-110 p-0",
+  "active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none dark:hover:bg-zinc-800 dark:hover:text-zinc-100 disabled:opacity-50 dark:focus:ring-zinc-400 disabled:pointer-events-none dark:focus:ring-offset-zinc-900 data-[state=open]:bg-zinc-100 dark:data-[state=open]:bg-zinc-800 transition duration-300 ease-in-out hover:scale-110 p-0",
   {
     variants: {
       variant: {
@@ -23,8 +22,8 @@ const buttonVariants = cva(
         linkDark:
           "bg-transparent dark:bg-transparent underline-offset-4 hover:underline text-zinc-900 dark:text-zinc-100 hover:bg-transparent dark:hover:bg-transparent px-0",
         linkLight:
-          "bg-transparent dark:bg-transparent underline-offset-4 underline text-zinc-50 dark:text-zinc-100 hover:bg-transparent dark:hover:bg-transparent  px-0",
-        white: "bg-white text-zinc-900 hover:bg-zinc-50 shadow-zinc-900 ",
+          "bg-transparent dark:bg-transparent underline-offset-4 underline text-zinc-50 dark:text-zinc-100 hover:bg-transparent dark:hover:bg-transparent px-0",
+        white: "bg-white text-zinc-900 hover:bg-zinc-50 shadow-zinc-900",
       },
       size: {
         default: "h-10 py-2 px-4",
@@ -47,19 +46,22 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
     VariantProps<typeof buttonVariants> {}
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = React.forwardRef<HTMLAnchorElement, ButtonProps>(
   ({ className, variant, size, border, ...props }, ref) => {
     return (
-      <button
+      <a
         className={cn(buttonVariants({ variant, size, border, className }))}
         ref={ref}
+        target="_blank"
         {...props}
       />
     );
   }
 );
+Button.displayName = "Button";
 
 export default Button;
+

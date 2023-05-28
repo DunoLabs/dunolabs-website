@@ -48,8 +48,8 @@ const FAQ: React.FC = () => {
           />
         </div>
         <Accordion type="single" collapsible className="w-full my-10">
-          {FAQList.map((item) => (
-            <AccordionItem value={item.question} className="py-3">
+          {FAQList.map((item, index) => (
+            <AccordionItem value={item.question} className="py-3" key={index}>
               <AccordionTrigger className="text-xl uppercase hover:no-underline">
                 {item.question}
               </AccordionTrigger>
@@ -65,3 +65,4 @@ const FAQ: React.FC = () => {
 };
 
 export default FAQ;
+
