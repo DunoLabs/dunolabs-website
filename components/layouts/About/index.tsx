@@ -1,6 +1,5 @@
 import ViewContainer from "@/components/layouts/ViewContainer";
 import Separator from "@/components/ui/Seperator";
-import { ArrowUpRight } from "lucide-react";
 import Button from "@/components/ui/Buttons";
 import Image from "next/image";
 import HeadingBanner from "@/components/ui/HeadingBanner";
