@@ -76,4 +76,3 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
 };
 
 export default CustomCursor;
-

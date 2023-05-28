@@ -12,6 +12,7 @@ interface LinkType {
 
 interface HeadingBannerProps {
   title: string;
+  color?: "text-zinc-900" | "text-zinc-50";
   description?: string;
   links?: LinkType[];
   className?: string;
@@ -20,13 +21,14 @@ interface HeadingBannerProps {
 
 const HeadingBanner: React.FC<HeadingBannerProps> = ({
   title,
+  color = "text-zinc-900",
   description,
   links,
   className,
   children,
 }) => {
   return (
-    <div className={cn("text-zinc-900", className)}>
+    <div className={cn(color, className)}>
       <h2 className="my-5 text-6xl font-extrabold sm:text-7xl">{title}</h2>
       <p className="mt-10">
         <span className="text-lg sm:text-xl text-gray">{description}</span>
@@ -50,4 +52,3 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
 };
 
 export default HeadingBanner;
-

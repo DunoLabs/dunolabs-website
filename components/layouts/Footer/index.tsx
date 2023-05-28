@@ -23,22 +23,23 @@ const Footer: React.FC = () => {
     <div className="relative pb-10 bg-zinc-900">
       <ViewContainer>
         <Separator />
-        <div className="flex flex-wrap items-center justify-between mt-10">
-          <div className="flex flex-wrap items-center justify-center w-full h-full sm:justify-between sm:w-1/4">
-            {FooterLinks.map((link) => (
-              <Link
-                href={link.link}
-                className="mx-4 text-lg border-0 hover:border-b-2 text-zinc-50 hover:text-zinc-100 sm:mx-0"
-              >
-                {link.title}
-              </Link>
-            ))}
-            <p className="mt-5">
-              <span className="text-lg text-zinc-50 sm:text-lg text-gray">
-                Made with 🤍 in India
-              </span>
-            </p>
-          </div>
+
+        <div className="flex flex-wrap items-center justify-center w-full h-full my-5 sm:justify-between sm:w-1/4">
+          {FooterLinks.map((link) => (
+            <Link
+              href={link.link}
+              className="mx-4 text-lg text-zinc-50 hover:text-zinc-100 sm:mx-0 text-start"
+            >
+              {link.title}
+            </Link>
+          ))}
+        </div>
+        <div className="flex flex-wrap items-center justify-center w-full h-full mt-4 sm:justify-between">
+          <p className="mt-5">
+            <span className="text-lg text-zinc-50 sm:text-lg text-gray">
+              Made with 🤍 in India
+            </span>
+          </p>
           <div className="flex flex-wrap items-center justify-center w-full h-full mt-4 sm:justify-around sm:w-1/6">
             <Instagram
               size={24}
@@ -60,4 +61,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-

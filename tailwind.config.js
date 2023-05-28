@@ -9,11 +9,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        satoshi: ["Satoshi", "sans-serif"],
-      },
-    },
+    extend: {},
   },
   variants: {},
   plugins: [],

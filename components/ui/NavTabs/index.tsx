@@ -14,17 +14,19 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/NavigationMenu";
+import { Url } from "url";
 
 interface MenuItem {
   title: string;
-  href: string;
+  href?: string | Url;
   description?: string;
 }
 
 interface MenuCategory {
   title: string;
-  href?: string;
+  href?: string | Url;
   submenu?: MenuItem[];
+  state?: string;
 }
 
 const menu: MenuCategory[] = [
@@ -59,10 +61,10 @@ const menu: MenuCategory[] = [
   //     },
   //   ],
   // },
-  {
-    title: "Contact",
-    href: "/contact",
-  },
+  // {
+  //   title: "Contact",
+  //   href: "/contact",
+  // },
 ];
 
 export function NavTabs() {
@@ -80,7 +82,9 @@ export function NavTabs() {
                       <ListItem
                         key={subItem.title}
                         title={subItem.title}
-                        href={subItem.href}
+                        href={
+                          subItem.href ? subItem.href.toString() : undefined
+                        }
                       >
                         {subItem.description}
                       </ListItem>
@@ -89,8 +93,10 @@ export function NavTabs() {
                 </NavigationMenuContent>
               </>
             ) : (
-              <Link href="/docs" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <Link href={item.href ?? "#"} legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={cn(navigationMenuTriggerStyle())}
+                >
                   {item.title}
                 </NavigationMenuLink>
               </Link>
@@ -113,6 +119,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-color focus:bg-zinc-900 ",
+
             className
           )}
           {...props}

@@ -21,4 +21,3 @@ const Marquee: React.FC<Props> = ({
 };
 
 export default Marquee;
-

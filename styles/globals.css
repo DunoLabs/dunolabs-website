@@ -2,23 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Satoshi";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("/public/fonts/OTF/Satoshi-Black.otf") format("opentype"),
-    url("/public/fonts/OTF/Satoshi-BlackItalic.otf") format("opentype"),
-    url("/public/fonts/OTF/Satoshi-Bold.otf") format("opentype"),
-    url("/public/fonts/OTF/Satoshi-BoldItalic.otf") format("opentype"),
-    url("/public/fonts/OTF/Satoshi-Italic.otf") format("opentype"),
-    url("/public/fonts/OTF/Satoshi-Light.otf") format("opentype"),
-    url("/public/fonts/OTF/Satoshi-LightItalic.otf") format("opentype"),
-    url("/public/fonts/OTF/Satoshi-Medium.otf") format("opentype"),
-    url("/public/fonts/OTF/Satoshi-MediumItalic.otf") format("opentype"),
-    url("/public/fonts/OTF/Satoshi-Regular.otf") format("opentype");
-}
-
 body {
   text-transform: lowercase;
 }
@@ -59,6 +42,10 @@ body {
   .marquee__group {
     animation-play-state: paused;
   }
+}
+
+.marquee:hover .marquee__group {
+  animation-play-state: paused;
 }
 
 @keyframes scroll {

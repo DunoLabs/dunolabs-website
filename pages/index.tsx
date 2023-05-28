@@ -7,11 +7,11 @@ import OurServices from "@/components/layouts/Services";
 import Marquee from "@/components/ui/Marquee";
 import FAQ from "@/components/layouts/FAQ";
 import Footer from "@/components/layouts/Footer";
+import Layout from "@/components/layouts";
 
 const Home = () => {
   return (
-    <>
-      <Header />
+    <Layout>
       <Hero />
 
       <About />
@@ -20,9 +20,8 @@ const Home = () => {
       <FAQ />
       <CTA />
       <Footer />
-    </>
+    </Layout>
   );
 };
 
 export default Home;
-

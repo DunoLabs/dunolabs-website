@@ -1,8 +1,9 @@
 import Button from "@/components/ui/Buttons";
-import { NavTabs } from "@/components/layouts/NavTabs";
+import { NavTabs } from "@/components/ui/NavTabs";
 import { ArrowUpRight } from "lucide-react";
 import Fixed from "@/lib/Fixed";
 import ViewContainer from "@/components/layouts/ViewContainer";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -12,9 +13,9 @@ const Header = () => {
           <div className="flex items-center justify-between h-16 ">
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <div className="flex items-center gap-4">
-                <a href="/" className="text-sm font-semibold">
+                <Link href="/" className="text-sm font-semibold">
                   dunolabs in black & white / 2023
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -40,7 +41,7 @@ const Header = () => {
           <div className="sm:flex sm:gap-4">
             <div>
               <Button className="rounded-full ">
-                We are Launching Soon <ArrowUpRight className="ml-1" />
+                we are launching soon <ArrowUpRight className="ml-1" />
               </Button>
             </div>
           </div>
