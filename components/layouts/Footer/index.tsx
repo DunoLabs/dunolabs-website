@@ -1,6 +1,6 @@
 import ViewContainer from "@/components/layouts/ViewContainer";
 import Separator from "@/components/ui/Seperator";
-import Link from "@/components/ui/Link";
+
 import { Instagram, Linkedin, Twitter } from "lucide-react";
 
 const FooterLinks = [
