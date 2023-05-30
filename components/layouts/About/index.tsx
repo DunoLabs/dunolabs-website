@@ -1,8 +1,8 @@
-import ViewContainer from "@/components/layouts/ViewContainer";
-import Separator from "@/components/ui/Seperator";
-import Button from "@/components/ui/Buttons";
+import ViewContainer from "components/layouts/ViewContainer";
+import Separator from "components/ui/Seperator";
+import Button from "components/ui/Buttons";
 import Image from "next/image";
-import HeadingBanner from "@/components/ui/HeadingBanner";
+import HeadingBanner from "components/ui/HeadingBanner";
 
 const About: React.FC = () => {
   const links = [{ href: "/about", text: "learn more" }];
@@ -68,4 +68,3 @@ const About: React.FC = () => {
 };
 
 export default About;
-

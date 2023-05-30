@@ -1,9 +1,9 @@
-import Layout from "@/components/layouts";
-import Footer from "@/components/layouts/Footer";
+import Layout from "components/layouts";
+import Footer from "components/layouts/Footer";
 
-import ViewContainer from "@/components/layouts/ViewContainer";
-import Button from "@/components/ui/Buttons";
-import CTA from "@/components/ui/CTA";
+import ViewContainer from "components/layouts/ViewContainer";
+import Button from "components/ui/Buttons";
+import CTA from "components/ui/CTA";
 import {
   Card,
   CardContent,
@@ -11,8 +11,8 @@ import {
   CardHeader,
   CardId,
   CardTitle,
-} from "@/components/ui/Card";
-import HeadingBanner from "@/components/ui/HeadingBanner";
+} from "components/ui/Card";
+import HeadingBanner from "components/ui/HeadingBanner";
 
 const CardData = [
   {
@@ -199,4 +199,3 @@ const People: React.FC = () => {
 };
 
 export default People;
-

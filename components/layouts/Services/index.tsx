@@ -1,11 +1,11 @@
-import ViewContainer from "@/components/layouts/ViewContainer";
+import ViewContainer from "components/layouts/ViewContainer";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/Accordion";
-import HeadingBanner from "@/components/ui/HeadingBanner";
+} from "components/ui/Accordion";
+import HeadingBanner from "components/ui/HeadingBanner";
 
 const OurServicesList = [
   {
@@ -88,4 +88,3 @@ const OurServices: React.FC = () => {
 };
 
 export default OurServices;
-

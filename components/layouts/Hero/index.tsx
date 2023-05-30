@@ -1,4 +1,4 @@
-import ViewContainer from "@/components/layouts/ViewContainer";
+import ViewContainer from "components/layouts/ViewContainer";
 
 const Hero = () => {
   return (

@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
-import Link from "@/components/ui/Link";
+import { cn } from "lib/utils";
+import Link from "components/ui/Link";
 
 interface LinkType {
   href: string;
@@ -49,4 +49,3 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
 };
 
 export default HeadingBanner;
-

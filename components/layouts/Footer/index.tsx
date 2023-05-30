@@ -1,5 +1,5 @@
-import ViewContainer from "@/components/layouts/ViewContainer";
-import Separator from "@/components/ui/Seperator";
+import ViewContainer from "components/layouts/ViewContainer";
+import Separator from "components/ui/Seperator";
 
 import { Instagram, Linkedin, Twitter } from "lucide-react";
 
@@ -61,4 +61,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-

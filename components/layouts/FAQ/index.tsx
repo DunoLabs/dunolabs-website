@@ -1,11 +1,11 @@
-import HeadingBanner from "@/components/ui/HeadingBanner";
+import HeadingBanner from "components/ui/HeadingBanner";
 import ViewContainer from "../ViewContainer";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/Accordion";
+} from "components/ui/Accordion";
 
 const FAQList = [
   {
@@ -65,4 +65,3 @@ const FAQ: React.FC = () => {
 };
 
 export default FAQ;
-
