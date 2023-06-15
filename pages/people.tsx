@@ -13,6 +13,7 @@ import {
   CardTitle,
 } from "components/ui/Card";
 import HeadingBanner from "components/ui/HeadingBanner";
+import { ArrowUpRight } from "lucide-react";
 
 const CardData = [
   {
@@ -97,7 +98,7 @@ const People: React.FC = () => {
               className="mt-10 rounded-full"
               href="https://www.notion.so/wh0sumit/work-dunolabs-e0dbc9782fda45208ed9ab23d9227dc7"
             >
-              we are hiring / apply now
+              we are hiring / apply now <ArrowUpRight className="ml-1" />
             </Button>
           </HeadingBanner>
         </ViewContainer>
@@ -127,7 +128,7 @@ const People: React.FC = () => {
                 /// add only odd cards
                 CardData.filter((_, index) => index % 2 === 0).map((card) => (
                   <Card
-                    className="w-full mb-10 border-none shadow-none sm:w-9/12"
+                    className="w-full mb-20 border-none shadow-none sm:mb-40 sm:w-9/12"
                     key={card.id}
                   >
                     <CardHeader>
@@ -150,7 +151,7 @@ const People: React.FC = () => {
                 /// add only even cards
                 CardData.filter((_, index) => index % 2 !== 0).map((card) => (
                   <Card
-                    className="w-full mt-10 border-none shadow-none sm:w-9/12"
+                    className="w-full mt-20 border-none shadow-none sm:mt-40 sm:w-9/12"
                     key={card.id}
                   >
                     <CardHeader>

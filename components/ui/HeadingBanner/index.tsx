@@ -2,7 +2,7 @@ import { cn } from "lib/utils";
 import Link from "components/ui/Link";
 
 interface LinkType {
-  href: string;
+  href?: string;
   text: string;
   linkVariant?: "linkLight" | "linkDark";
 }
@@ -26,7 +26,7 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
 }) => {
   return (
     <div className={cn(color, className)}>
-      <h2 className="my-5 text-6xl font-extrabold sm:text-7xl">{title}</h2>
+      <h2 className="my-5 text-5xl font-extrabold sm:text-7xl">{title}</h2>
       <p className="mt-10">
         <span className="text-lg sm:text-xl text-gray">{description}</span>
       </p>

@@ -1,7 +1,7 @@
 import ViewContainer from "components/layouts/ViewContainer";
 import Separator from "components/ui/Seperator";
 
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Link, Linkedin, Twitter } from "lucide-react";
 
 const FooterLinks = [
   {
@@ -20,7 +20,7 @@ const FooterLinks = [
 
 const Footer: React.FC = () => {
   return (
-    <div className="relative pb-10 bg-zinc-900">
+    <div className="relative pb-32 sm:pb-10 bg-zinc-900">
       <ViewContainer>
         <Separator />
 
@@ -40,19 +40,26 @@ const Footer: React.FC = () => {
               Made with 🤍 in India
             </span>
           </p>
-          <div className="flex flex-wrap items-center justify-center w-full h-full mt-4 sm:justify-around sm:w-1/6">
-            <Instagram
-              size={24}
-              className="mx-4 text-lg border-0 hover:border-b-2 text-zinc-50 hover:text-zinc-100 sm:mx-0"
-            />
-            <Twitter
-              size={24}
-              className="mx-4 text-lg border-0 hover:border-b-2 text-zinc-50 hover:text-zinc-100 sm:mx-0"
-            />
-            <Linkedin
-              size={24}
-              className="mx-4 text-lg border-0 hover:border-b-2 text-zinc-50 hover:text-zinc-100 sm:mx-0"
-            />
+          <div className="flex flex-wrap items-center justify-center w-full h-full gap-6 mt-4 sm:justify-around sm:w-1/6 ">
+            <Link href="https://www.instagram.com/dunolabs">
+              <Instagram
+                size={24}
+                className="mx-4 text-lg border-0 hover:border-b-2 text-zinc-50 hover:text-zinc-100 sm:mx-0"
+              />
+            </Link>
+            <Link href="https://www.twitter.com/dunolabs">
+              <Twitter
+                size={24}
+                className="mx-4 text-lg border-0 hover:border-b-2 text-zinc-50 hover:text-zinc-100 sm:mx-0"
+              />
+            </Link>
+
+            <Link href="https://www.linkedin.com/company/dunolabs">
+              <Linkedin
+                size={24}
+                className="mx-4 text-lg border-0 hover:border-b-2 text-zinc-50 hover:text-zinc-100 sm:mx-0"
+              />
+            </Link>
           </div>
         </div>
       </ViewContainer>
@@ -61,4 +68,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-

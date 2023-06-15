@@ -6,6 +6,7 @@ import CTA from "components/ui/CTA";
 import Calendar from "components/ui/Calendar";
 import HeadingBanner from "components/ui/HeadingBanner";
 import Marquee from "components/ui/Marquee";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 const Contact = () => {
@@ -62,7 +63,7 @@ const Contact = () => {
               </p>
               <Button variant={"white"} className="my-10 rounded-full" asChild>
                 <Link href="https://cal.com/wh0sumit/15min" target="_blank">
-                  connect over a call with : sumit & yash
+                  BOOK A MEETING <ArrowUpRight className="ml-1" />
                 </Link>
               </Button>
             </HeadingBanner>
@@ -70,6 +71,7 @@ const Contact = () => {
           </div>
         </ViewContainer>
       </div>
+
       <Marquee text="Contact us Now" className="bg-zinc-50 text-zinc-900 " />
       <CTA />
       <Footer />

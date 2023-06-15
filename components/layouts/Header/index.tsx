@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <Fixed>
       <ViewContainer>
-        <div className="px-10 mx-auto my-5 border-2 rounded-full w-100 backdrop-blur bg-white/60">
-          <div className="flex items-center justify-between h-16 ">
+        <div className="my-5 border-2 rounded-full sm:px-10 w-100 backdrop-blur bg-white/60 px-7">
+          <div className="flex items-center justify-between h-14 sm:h-16 ">
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <div className="flex items-center justify-center gap-4 ">
                 <Link

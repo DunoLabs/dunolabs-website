@@ -56,7 +56,6 @@ const OurServices: React.FC = () => {
                 links={[
                   {
                     text: "View all services",
-                    href: "/services",
                     linkVariant: "linkDark",
                   },
                 ]}

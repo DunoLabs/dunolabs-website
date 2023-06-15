@@ -31,11 +31,11 @@ interface MenuCategory {
 
 const menu: MenuCategory[] = [
   {
-    title: "Home",
+    title: "home.",
     href: "/",
   },
   {
-    title: "People",
+    title: "people.",
     href: "/people",
   },
   // {

@@ -115,6 +115,7 @@ const NavigationMenuIndicator = React.forwardRef<
 NavigationMenuIndicator.displayName =
   NavigationMenuPrimitive.Indicator.displayName;
 
+
 export {
   navigationMenuTriggerStyle,
   NavigationMenu,
@@ -125,4 +126,5 @@ export {
   NavigationMenuLink,
   NavigationMenuIndicator,
   NavigationMenuViewport,
+
 };
