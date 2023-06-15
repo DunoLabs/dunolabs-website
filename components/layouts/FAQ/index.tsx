@@ -7,7 +7,12 @@ import {
   AccordionTrigger,
 } from "components/ui/Accordion";
 
-const FAQList = [
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const FAQList: FAQItem[] = [
   {
     question: " What is your process?",
     answer:
@@ -37,7 +42,7 @@ const FAQList = [
   },
 ];
 
-const FAQ: React.FC = () => {
+const FAQ: React.FC<FAQItem> = () => {
   return (
     <div className="relative py-24 sm:py-32">
       <ViewContainer>

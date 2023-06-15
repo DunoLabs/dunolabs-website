@@ -4,9 +4,13 @@ import Button from "components/ui/Buttons";
 import Image from "next/image";
 import HeadingBanner from "components/ui/HeadingBanner";
 
-const About: React.FC = () => {
-  const links = [{ href: "/about", text: "learn more" }];
+interface Link {
+  href: string;
+  text: string;
+}
 
+const links: Link[] = [{ href: "/about", text: "learn more" }];
+const About: React.FC<Link> = () => {
   return (
     <div className="relative py-24 bg-zinc-900 sm:py-32">
       <div className="absolute right-0 flex items-center py-4 text-zinc-50 rounded-full -top-[21.3rem] ">
@@ -68,4 +72,3 @@ const About: React.FC = () => {
 };
 
 export default About;
-

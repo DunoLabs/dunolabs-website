@@ -1,5 +1,6 @@
 import { cn } from "lib/utils";
 import Link from "components/ui/Link";
+import TextAnimation from "lib/TextAnimation";
 
 interface LinkType {
   href?: string;
@@ -26,11 +27,16 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
 }) => {
   return (
     <div className={cn(color, className)}>
-      <h2 className="my-5 text-5xl font-extrabold sm:text-7xl">{title}</h2>
+      <h2 className="my-5 text-5xl font-extrabold sm:text-7xl">
+        <TextAnimation>{title}</TextAnimation>
+      </h2>
       <p className="mt-10">
-        <span className="text-lg sm:text-xl text-gray">{description}</span>
+        <span className="text-lg sm:text-xl text-gray">
+          {" "}
+          <TextAnimation>{description}</TextAnimation>
+        </span>
       </p>
-      {children}
+      <TextAnimation>{children}</TextAnimation>
       {links &&
         links.map((link, index) => (
           <div className="mt-10" key={index}>
@@ -40,7 +46,7 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
               size={"lg"}
               variant={link.linkVariant}
             >
-              {link.text}
+              <TextAnimation>{link.text}</TextAnimation>
             </Link>
           </div>
         ))}

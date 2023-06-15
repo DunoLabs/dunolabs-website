@@ -6,35 +6,47 @@ import {
   AccordionTrigger,
 } from "components/ui/Accordion";
 import HeadingBanner from "components/ui/HeadingBanner";
+import { Badge } from "components/ui/Badge";
 
-const OurServicesList = [
+interface OurServicesItem {
+  item: string;
+  title: string;
+  content: string;
+  status: string;
+}
+
+const OurServicesList: OurServicesItem[] = [
   {
     item: "item-1",
     title: "UX / UI Design",
     content:
       "We design beautiful and functional interfaces, from scratch or based on your existing design.",
+    status: "active",
   },
   {
     item: "item-2",
-    title: "Web Design",
+    title: "Product Design",
     content:
       "We design beautiful and functional interfaces, from scratch or based on your existing design.",
+    status: "active",
   },
   {
     item: "item-3",
     title: "Web Development",
     content:
-      "We build websites and web applications using the latest technologies.",
+      "we provide you better and modern web interface for your company website and web products",
+    status: "active",
   },
   {
     item: "item-4",
     title: "App Development",
     content:
       "We build mobile apps for iOS and Android, using the latest technologies.",
+    status: "coming soon",
   },
 ];
 
-const OurServices: React.FC = () => {
+const OurServices: React.FC<OurServicesItem> = () => {
   return (
     <div className="relative py-24 sm:py-40">
       <ViewContainer>
@@ -70,7 +82,15 @@ const OurServices: React.FC = () => {
                 {OurServicesList.map((item, index) => (
                   <AccordionItem value={item.item} className="py-3" key={index}>
                     <AccordionTrigger className="text-lg uppercase sm:text-xl hover:no-underline">
-                      {item.title}
+                      {item.title}{" "}
+                      {item.status === "coming soon" ? (
+                        <Badge
+                          className="ml-2 bg-zinc-900 text-zinc-50"
+                          variant={"default"}
+                        >
+                          {item.status}
+                        </Badge>
+                      ) : null}
                     </AccordionTrigger>
                     <AccordionContent className="text-lg">
                       {item.content}
