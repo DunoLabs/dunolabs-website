@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "components/layouts/Header";
-import MobileMenu from "components/ui/MobileMenu";
+import MobileNav from "components/ui/MobileNav";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div>
       <Header />
       {children}
-      <MobileMenu />
+      <MobileNav />
     </div>
   );
 };

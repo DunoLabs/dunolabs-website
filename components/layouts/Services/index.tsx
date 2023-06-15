@@ -28,9 +28,9 @@ const OurServicesList = [
   },
   {
     item: "item-4",
-    title: "Digital Marketing",
+    title: "App Development",
     content:
-      "We help you reach your target audience and convert them into customers using the latest digital marketing techniques.",
+      "We build mobile apps for iOS and Android, using the latest technologies.",
   },
 ];
 

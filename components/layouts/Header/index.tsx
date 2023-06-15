@@ -17,7 +17,7 @@ const Header = () => {
                   href="/"
                   className="text-sm font-semibold text-center sm:text-start "
                 >
-                  dunolabs in black & white / 2023
+                  dunolabs in black &amp; white / 2023
                 </Link>
               </div>
             </div>
@@ -45,7 +45,7 @@ const Header = () => {
           <div className="sm:flex sm:gap-4">
             <Button className="rounded-full " asChild>
               <Link href="/contact">
-                let's be frens! <ArrowUpRight className="ml-1" />
+                let&apos;s be frens! <ArrowUpRight className="ml-1" />
               </Link>
             </Button>
           </div>

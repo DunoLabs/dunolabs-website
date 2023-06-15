@@ -20,9 +20,9 @@ const Contact = () => {
               className="mt-10 text-zinc-50"
             >
               <p className="mt-10 text-lg sm:text-xl text-gray">
-                If you have a specific project, a rough idea or a belief in a
+                If you have a specific project, a rough idea, or a belief in a
                 partnership that you want to discuss with us, sumit loves to
-                read your mail."
+                read your mail.
               </p>
 
               <div className="my-10 contact-info">
@@ -58,7 +58,7 @@ const Contact = () => {
                 </p>
               </div>
               <p className="mt-10 text-lg sm:text-xl text-gray">
-                By the way, you can also send us a email for unpaid
+                By the way, you can also send us an email for unpaid
                 pitch-requests.
               </p>
               <Button variant={"white"} className="my-10 rounded-full" asChild>

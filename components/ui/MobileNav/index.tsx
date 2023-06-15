@@ -36,7 +36,7 @@ const menu: MenuCategory[] = [
   },
 ];
 
-const MobileMenu: FC = () => {
+const MobileNav: FC = () => {
   return (
     <div className="flex items-center justify-center ">
       <div className="fixed p-1 transform -translate-x-1/2 border-2 rounded-xl w-100 backdrop-blur bg-white/60 bottom-4 left-1/2 md:hidden">
@@ -57,5 +57,5 @@ const MobileMenu: FC = () => {
   );
 };
 
-export default MobileMenu;
+export default MobileNav;
 
