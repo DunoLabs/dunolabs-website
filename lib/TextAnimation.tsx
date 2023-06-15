@@ -1,5 +1,4 @@
-import React from "react";
-import { FC, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, Variants } from "framer-motion";
 
 type TextAnimationProps = {
@@ -7,7 +6,7 @@ type TextAnimationProps = {
   threshold?: number;
 };
 
-const TextAnimation: FC<TextAnimationProps> = ({
+const TextAnimation: React.FC<TextAnimationProps> = ({
   children,
   threshold = 0.2,
 }) => {
@@ -42,7 +41,7 @@ const TextAnimation: FC<TextAnimationProps> = ({
   const itemVariants: Variants = {
     hidden: {
       opacity: 0,
-      y: -100,
+      y: -20,
     },
     visible: {
       opacity: 1,
@@ -66,7 +65,10 @@ const TextAnimation: FC<TextAnimationProps> = ({
           initial="hidden"
           animate={controls}
           variants={itemVariants}
-          transition={{ duration: 1, delay: index * 0.01 }}
+          transition={{
+            duration: 0.5,
+            delay: index * 0.01,
+          }}
         >
           {character}
         </motion.span>
