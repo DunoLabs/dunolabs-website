@@ -12,8 +12,11 @@ const Header = () => {
         <div className="px-10 mx-auto my-5 border-2 rounded-full w-100 backdrop-blur bg-white/60">
           <div className="flex items-center justify-between h-16 ">
             <div className="flex-1 md:flex md:items-center md:gap-12">
-              <div className="flex items-center gap-4">
-                <Link href="/" className="text-sm font-semibold">
+              <div className="flex items-center justify-center gap-4 ">
+                <Link
+                  href="/"
+                  className="text-sm font-semibold text-center sm:text-start "
+                >
                   dunolabs in black & white / 2023
                 </Link>
               </div>
@@ -28,22 +31,23 @@ const Header = () => {
         </div>
         <div className="items-center justify-between hidden gap-4 sm:flex">
           <div className="sm:flex sm:gap-4">
-            <div>
-              <Button
-                variant={"white"}
-                className="rounded-full "
-                border="default"
-              >
+            <Button
+              variant={"white"}
+              className="rounded-full "
+              border="default"
+              asChild
+            >
+              <Link href="mailto:dunolabs@gmail.com">
                 dunolabs@gmail.com <ArrowUpRight className="ml-1" />
-              </Button>
-            </div>
+              </Link>
+            </Button>
           </div>{" "}
           <div className="sm:flex sm:gap-4">
-            <div>
-              <Button className="rounded-full ">
-                we are launching soon <ArrowUpRight className="ml-1" />
-              </Button>
-            </div>
+            <Button className="rounded-full " asChild>
+              <Link href="/contact">
+                let's be frens! <ArrowUpRight className="ml-1" />
+              </Link>
+            </Button>
           </div>
         </div>
       </ViewContainer>
@@ -52,4 +56,3 @@ const Header = () => {
 };
 
 export default Header;
-

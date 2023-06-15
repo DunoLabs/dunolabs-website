@@ -127,11 +127,11 @@ const People: React.FC = () => {
                 /// add only odd cards
                 CardData.filter((_, index) => index % 2 === 0).map((card) => (
                   <Card
-                    className="w-9/12 mb-48 border-none shadow-none"
+                    className="w-full mb-10 border-none shadow-none sm:w-9/12"
                     key={card.id}
                   >
                     <CardHeader>
-                      <CardId>{card.id}</CardId>
+                      <CardId className="hidden sm:flex">{card.id}</CardId>
                       <CardTitle className="mb-3 text-3xl ">
                         {card.title}
                       </CardTitle>
@@ -150,11 +150,11 @@ const People: React.FC = () => {
                 /// add only even cards
                 CardData.filter((_, index) => index % 2 !== 0).map((card) => (
                   <Card
-                    className="w-9/12 mt-48 border-none shadow-none"
+                    className="w-full mt-10 border-none shadow-none sm:w-9/12"
                     key={card.id}
                   >
                     <CardHeader>
-                      <CardId>{card.id}</CardId>
+                      <CardId className="hidden sm:flex">{card.id}</CardId>
                       <CardTitle className="mb-3 text-3xl ">
                         {card.title}
                       </CardTitle>
@@ -199,4 +199,3 @@ const People: React.FC = () => {
 };
 
 export default People;
-

@@ -1,9 +1,10 @@
 import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "lib/utils";
 
 const buttonVariants = cva(
-  "active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none dark:hover:bg-zinc-800 dark:hover:text-zinc-100 disabled:opacity-50 dark:focus:ring-zinc-400 disabled:pointer-events-none dark:focus:ring-offset-zinc-900 data-[state=open]:bg-zinc-100 dark:data-[state=open]:bg-zinc-800 transition duration-300 ease-in-out hover:scale-110 p-0",
+  "active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none dark:hover:bg-zinc-800 dark:hover:text-zinc-100 disabled:opacity-50 dark:focus:ring-zinc-400 disabled:pointer-events-none dark:focus:ring-offset-zinc-900 data-[state=open]:bg-zinc-100 dark:data-[state=open]:bg-zinc-800 transition duration-300 ease-in-out hover:scale-110 p-0 cursor-pointer",
   {
     variants: {
       variant: {
@@ -47,15 +48,18 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
-    VariantProps<typeof buttonVariants> {}
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+}
 
 const Button = React.forwardRef<HTMLAnchorElement, ButtonProps>(
-  ({ className, variant, size, border, ...props }, ref) => {
+  ({ className, variant, asChild = false, size, border, ...props }, ref) => {
+    const Component = asChild ? Slot : "a";
     return (
-      <a
+      <Component
         className={cn(buttonVariants({ variant, size, border, className }))}
         ref={ref}
-        target="_blank"
+        target={asChild ? undefined : "_blank"}
         {...props}
       />
     );
