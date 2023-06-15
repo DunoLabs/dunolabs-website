@@ -1,6 +1,5 @@
 import About from "components/layouts/About";
 import CTA from "components/ui/CTA";
-import Header from "components/layouts/Header";
 import Hero from "components/layouts/Hero";
 import OurServices from "components/layouts/Services";
 

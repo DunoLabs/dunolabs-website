@@ -1,3 +1,4 @@
+import React from "react";
 import ViewContainer from "components/layouts/ViewContainer";
 import {
   Accordion,
@@ -34,7 +35,7 @@ const OurServicesList: OurServicesItem[] = [
     item: "item-3",
     title: "Web Development",
     content:
-      "we provide you better and modern web interface for your company website and web products",
+      "We provide you with better and modern web interfaces for your company website and web products.",
     status: "active",
   },
   {
@@ -46,7 +47,7 @@ const OurServicesList: OurServicesItem[] = [
   },
 ];
 
-const OurServices: React.FC<OurServicesItem> = () => {
+const OurServices: React.FC = () => {
   return (
     <div className="relative py-24 sm:py-40">
       <ViewContainer>
@@ -59,28 +60,29 @@ const OurServices: React.FC<OurServicesItem> = () => {
                 </span>
               </p>
               <HeadingBanner
-                title="Tough challenges?
-                Take it easy!
-                We’ll assist you."
-                description="  we are a team of passionate developers and designers who are
-                  dedicated to creating the best possible user experience for
-                  our clients."
+                title="Tough challenges? Take it easy! We’ll assist you."
+                description="We are a team of passionate developers and designers who are dedicated to creating the best possible user experience for our clients."
                 links={[
                   {
                     text: "View all services",
                     linkVariant: "linkDark",
+                    href: "/services", // Add the href property
                   },
                 ]}
               />
             </div>
-            <div className=" sm:w-[28rem] w-full">
+            <div className="sm:w-[28rem] w-full">
               <Accordion
                 type="single"
                 collapsible
-                className=" sm:w-[28rem] w-full"
+                className="sm:w-[28rem] w-full"
               >
-                {OurServicesList.map((item, index) => (
-                  <AccordionItem value={item.item} className="py-3" key={index}>
+                {OurServicesList.map((item) => (
+                  <AccordionItem
+                    value={item.item}
+                    className="py-3"
+                    key={item.item}
+                  >
                     <AccordionTrigger className="text-lg uppercase sm:text-xl hover:no-underline">
                       {item.title}{" "}
                       {item.status === "coming soon" ? (
