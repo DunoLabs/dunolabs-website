@@ -3,12 +3,11 @@
 @tailwind utilities;
 
 body {
-  text-transform: lowercase;
+  @apply lowercase;
 }
 
 ::selection {
-  background-color: #f8f8f8;
-  color: #000;
+  @apply bg-pink-600 text-white;
 }
 
 .marquee {
