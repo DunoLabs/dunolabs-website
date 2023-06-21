@@ -1,13 +1,13 @@
 import React from "react";
-import ViewContainer from "components/layouts/ViewContainer";
+import ViewContainer from "components/layouts/view-container";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "components/ui/Accordion";
-import HeadingBanner from "components/ui/HeadingBanner";
-import { Badge } from "components/ui/Badge";
+} from "components/ui/accordion";
+import HeadingBanner from "components/ui/heading-banner";
+import { Badge } from "components/ui/badge";
 
 interface OurServicesItem {
   item: string;

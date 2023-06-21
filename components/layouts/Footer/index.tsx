@@ -1,5 +1,5 @@
-import ViewContainer from "components/layouts/ViewContainer";
-import Separator from "components/ui/Seperator";
+import ViewContainer from "components/layouts/view-container";
+import Separator from "components/ui/seperator";
 
 import { Instagram, Link, Linkedin, Twitter } from "lucide-react";
 

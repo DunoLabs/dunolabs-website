@@ -1,6 +1,6 @@
 import { cn } from "lib/utils";
-import Link from "components/ui/Link";
-import TextAnimation from "lib/TextAnimation";
+import Link from "components/ui/link";
+import TextAnimation from "lib/text-animation";
 
 interface LinkType {
   href?: string;

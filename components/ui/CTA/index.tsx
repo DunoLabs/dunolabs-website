@@ -1,5 +1,5 @@
-import ViewContainer from "components/layouts/ViewContainer";
-import HeadingBanner from "components/ui/HeadingBanner";
+import ViewContainer from "components/layouts/view-container";
+import HeadingBanner from "components/ui/heading-banner";
 
 const CTA: React.FC = () => {
   return (

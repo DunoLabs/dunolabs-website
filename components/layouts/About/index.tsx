@@ -1,9 +1,9 @@
 import React from "react";
-import ViewContainer from "components/layouts/ViewContainer";
-import Separator from "components/ui/Seperator";
-import Button from "components/ui/Buttons";
+import ViewContainer from "components/layouts/view-container";
+import Separator from "components/ui/seperator";
+import Button from "components/ui/buttons";
 import Image from "next/image";
-import HeadingBanner from "components/ui/HeadingBanner";
+import HeadingBanner from "components/ui/heading-banner";
 
 interface Link {
   href: string;
