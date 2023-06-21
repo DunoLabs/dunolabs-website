@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import Link from "next/link";
+import * as React from 'react';
+import Link from 'next/link';
 
-import { cn } from "lib/utils";
+import { cn } from 'lib/utils';
 
 import {
   NavigationMenu,
@@ -13,8 +13,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "components/ui/navigation-menu";
-import { Url } from "url";
+} from 'components/ui/navigation-menu';
+import { Url } from 'url';
 
 interface MenuItem {
   title: string;
@@ -31,12 +31,12 @@ interface MenuCategory {
 
 const menu: MenuCategory[] = [
   {
-    title: "home.",
-    href: "/",
+    title: 'home.',
+    href: '/',
   },
   {
-    title: "people.",
-    href: "/people",
+    title: 'people.',
+    href: '/people',
   },
   // {
   //   title: "work",
@@ -84,8 +84,7 @@ export function NavTabs() {
                         title={subItem.title}
                         href={
                           subItem.href ? subItem.href.toString() : undefined
-                        }
-                      >
+                        }>
                         {subItem.description}
                       </ListItem>
                     ))}
@@ -93,10 +92,9 @@ export function NavTabs() {
                 </NavigationMenuContent>
               </>
             ) : (
-              <Link href={item.href ?? "#"} legacyBehavior passHref>
+              <Link href={item.href ?? '#'} legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={cn(navigationMenuTriggerStyle())}
-                >
+                  className={cn(navigationMenuTriggerStyle())}>
                   {item.title}
                 </NavigationMenuLink>
               </Link>
@@ -109,8 +107,8 @@ export function NavTabs() {
 }
 
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
+  React.ElementRef<'a'>,
+  React.ComponentPropsWithoutRef<'a'>
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
@@ -118,12 +116,11 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-color focus:bg-zinc-900",
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-color focus:bg-zinc-900',
 
-            className
+            className,
           )}
-          {...props}
-        >
+          {...props}>
           <div className="text-sm font-medium leading-none text-zinc-900 dark:text-zinc-900">
             {title}
           </div>
@@ -136,4 +133,4 @@ const ListItem = React.forwardRef<
     </li>
   );
 });
-ListItem.displayName = "ListItem";
+ListItem.displayName = 'ListItem';

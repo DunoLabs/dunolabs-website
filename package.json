@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore ."
+    "cf-check": "prettier --check --ignore-path .gitignore .",
+    "cf-fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
     "@calcom/embed-react": "^1.1.1",
@@ -25,7 +25,7 @@
     "eslint-config-next": "13.2.4",
     "framer-motion": "^10.12.16",
     "next": "13.2.4",
-    "prettier": "^2.8.7",
+    "prettier": "^2.8.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "^4.9.5"

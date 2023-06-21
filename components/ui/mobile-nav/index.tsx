@@ -1,12 +1,12 @@
-import { FC } from "react";
-import Link from "next/link";
+import { FC } from 'react';
+import Link from 'next/link';
 import {
   Menubar,
   MenubarMenu,
   MenubarSeparator,
   MenubarTrigger,
-} from "components/ui/menu-bar";
-import { Url } from "url";
+} from 'components/ui/menu-bar';
+import { Url } from 'url';
 
 interface MenuItem {
   title: string;
@@ -23,16 +23,16 @@ interface MenuCategory {
 
 const menu: MenuCategory[] = [
   {
-    title: "home.",
-    href: "/",
+    title: 'home.',
+    href: '/',
   },
   {
-    title: "people.",
-    href: "/people",
+    title: 'people.',
+    href: '/people',
   },
   {
-    title: "contact.",
-    href: "/contact",
+    title: 'contact.',
+    href: '/contact',
   },
 ];
 
@@ -58,4 +58,3 @@ const MobileNav: FC = () => {
 };
 
 export default MobileNav;
-

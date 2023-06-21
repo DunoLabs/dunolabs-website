@@ -1,5 +1,5 @@
-import { CSSProperties } from "react";
-import { cn } from "./utils";
+import { CSSProperties } from 'react';
+import { cn } from './utils';
 
 interface FixedProps {
   children: React.ReactNode;
@@ -22,24 +22,23 @@ const Fixed: React.FC<FixedProps> = ({
   className,
   style,
 }) => {
-  const position = `${top ?? "auto"} ${right ?? "auto"} ${bottom ?? "auto"} ${
-    left ?? "auto"
+  const position = `${top ?? 'auto'} ${right ?? 'auto'} ${bottom ?? 'auto'} ${
+    left ?? 'auto'
   }`;
 
   return (
     <div
       className={cn(
         `top-0 right-0 bottom-0 left-0 w-full ${position}`,
-        className
+        className,
       )}
       style={
         {
-          position: "fixed",
+          position: 'fixed',
           zIndex,
           ...style,
         } as CSSProperties
-      }
-    >
+      }>
       {children}
     </div>
   );

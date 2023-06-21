@@ -1,11 +1,11 @@
-import Cal, { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
+import Cal, { getCalApi } from '@calcom/embed-react';
+import { useEffect } from 'react';
 const Calendar = () => {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi();
-      cal("ui", {
-        styles: { branding: { brandColor: "#18181b" } },
+      cal('ui', {
+        styles: { branding: { brandColor: '#18181b' } },
         hideEventTypeDetails: false,
       });
     })();
@@ -14,4 +14,3 @@ const Calendar = () => {
 };
 
 export default Calendar;
-

@@ -1,20 +1,20 @@
-import ViewContainer from "components/layouts/view-container";
-import Separator from "components/ui/seperator";
+import ViewContainer from 'components/layouts/view-container';
+import Separator from 'components/ui/seperator';
 
-import { Instagram, Link, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Link, Linkedin, Twitter } from 'lucide-react';
 
 const FooterLinks = [
   {
-    title: "legal notice",
-    link: "/legal",
+    title: 'legal notice',
+    link: '/legal',
   },
   {
-    title: "Privacy Policy",
-    link: "/privacy",
+    title: 'Privacy Policy',
+    link: '/privacy',
   },
   {
-    title: "Terms",
-    link: "/terms",
+    title: 'Terms',
+    link: '/terms',
   },
 ];
 

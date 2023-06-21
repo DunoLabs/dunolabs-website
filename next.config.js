@@ -10,8 +10,8 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: "/fonts/:slug*",
-        destination: "/fonts/:slug*",
+        source: '/fonts/:slug*',
+        destination: '/fonts/:slug*',
       },
     ];
   },

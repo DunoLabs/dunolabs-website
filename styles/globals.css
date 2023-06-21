@@ -60,7 +60,7 @@ body {
 /* Underline */
 
 .underline-custom:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -4px;
@@ -100,4 +100,3 @@ body {
     opacity: 1;
   }
 }
-

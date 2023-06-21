@@ -1,9 +1,9 @@
-import Button from "components/ui/buttons";
-import { NavTabs } from "components/ui/nav-tabs";
-import { ArrowUpRight } from "lucide-react";
-import Fixed from "lib/fixed";
-import ViewContainer from "components/layouts/view-container";
-import Link from "next/link";
+import Button from 'components/ui/buttons';
+import { NavTabs } from 'components/ui/nav-tabs';
+import { ArrowUpRight } from 'lucide-react';
+import Fixed from 'lib/fixed';
+import ViewContainer from 'components/layouts/view-container';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -15,8 +15,7 @@ const Header = () => {
               <div className="flex items-center justify-center gap-4 ">
                 <Link
                   href="/"
-                  className="text-sm font-semibold text-center sm:text-start "
-                >
+                  className="text-sm font-semibold text-center sm:text-start ">
                   dunolabs in black &amp; white / 2023
                 </Link>
               </div>
@@ -32,16 +31,15 @@ const Header = () => {
         <div className="items-center justify-between hidden gap-4 sm:flex">
           <div className="sm:flex sm:gap-4">
             <Button
-              variant={"white"}
+              variant={'white'}
               className="rounded-full "
               border="default"
-              asChild
-            >
+              asChild>
               <Link href="mailto:dunolabs@gmail.com">
                 dunolabs@gmail.com <ArrowUpRight className="ml-1" />
               </Link>
             </Button>
-          </div>{" "}
+          </div>{' '}
           <div className="sm:flex sm:gap-4">
             <Button className="rounded-full " asChild>
               <Link href="/contact">

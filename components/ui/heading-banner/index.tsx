@@ -1,16 +1,16 @@
-import { cn } from "lib/utils";
-import Link from "components/ui/link";
-import TextAnimation from "lib/text-animation";
+import { cn } from 'lib/utils';
+import Link from 'components/ui/link';
+import TextAnimation from 'lib/text-animation';
 
 interface LinkType {
   href?: string;
   text: string;
-  linkVariant?: "linkLight" | "linkDark";
+  linkVariant?: 'linkLight' | 'linkDark';
 }
 
 interface HeadingBannerProps {
   title: string;
-  color?: "text-zinc-900" | "text-zinc-50";
+  color?: 'text-zinc-900' | 'text-zinc-50';
   description?: string;
   links?: LinkType[];
   className?: string;
@@ -19,7 +19,7 @@ interface HeadingBannerProps {
 
 const HeadingBanner: React.FC<HeadingBannerProps> = ({
   title,
-  color = "text-zinc-900",
+  color = 'text-zinc-900',
   description,
   links,
   className,
@@ -32,7 +32,7 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
       </h2>
       <p className="mt-10">
         <span className="text-lg sm:text-xl text-gray">
-          {" "}
+          {' '}
           <TextAnimation>{description}</TextAnimation>
         </span>
       </p>
@@ -43,9 +43,8 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
             <Link
               key={link.href}
               href={link.href}
-              size={"lg"}
-              variant={link.linkVariant}
-            >
+              size={'lg'}
+              variant={link.linkVariant}>
               <TextAnimation>{link.text}</TextAnimation>
             </Link>
           </div>

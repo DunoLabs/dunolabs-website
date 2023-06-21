@@ -1,21 +1,20 @@
-import ViewContainer from "components/layouts/view-container";
-import HeadingBanner from "components/ui/heading-banner";
+import ViewContainer from 'components/layouts/view-container';
+import HeadingBanner from 'components/ui/heading-banner';
 
 const CTA: React.FC = () => {
   return (
     <div className="relative py-24 bg-zinc-900 sm:py-32">
       <ViewContainer>
         <HeadingBanner
-          title={"Let’s do this together!"}
+          title={'Let’s do this together!'}
           className="text-zinc-50"
           links={[
             {
-              href: "mailto:dunolabs@gmail.com",
-              text: "dunolabs@gmail.com",
-              linkVariant: "linkLight",
+              href: 'mailto:dunolabs@gmail.com',
+              text: 'dunolabs@gmail.com',
+              linkVariant: 'linkLight',
             },
-          ]}
-        >
+          ]}>
           <div className="max-w-3xl mt-10">
             <p className="mt-10">
               <span className="text-lg sm:text-xl text-gray">
@@ -49,4 +48,3 @@ const CTA: React.FC = () => {
 };
 
 export default CTA;
-

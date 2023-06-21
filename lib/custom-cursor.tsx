@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { cn } from "./utils";
+import React, { useState, useEffect } from 'react';
+import { cn } from './utils';
 
 interface CustomCursorProps extends React.HTMLAttributes<HTMLDivElement> {
   image: string;
@@ -10,8 +10,8 @@ interface CustomCursorProps extends React.HTMLAttributes<HTMLDivElement> {
 const CustomCursor: React.FC<CustomCursorProps> = ({
   children,
   image,
-  imageWidth = "200px",
-  imageHeight = "200px",
+  imageWidth = '200px',
+  imageHeight = '200px',
   ...attr
 }) => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
@@ -29,9 +29,9 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   };
 
   useEffect(() => {
-    window.addEventListener("wheel", handleWheel);
+    window.addEventListener('wheel', handleWheel);
     return () => {
-      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener('wheel', handleWheel);
     };
   }, []);
   const handleMouseLeave = () => {
@@ -39,18 +39,18 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   };
 
   const cursorStyle: React.CSSProperties = {
-    position: "fixed",
+    position: 'fixed',
     left: position.x,
     top: position.y,
     zIndex: 9999,
-    pointerEvents: "none",
+    pointerEvents: 'none',
     width: imageWidth,
     height: imageHeight,
     backgroundImage: `url(${image})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "contain",
-    transform: "translate(-50%, -50%)", // Center the cursor on the mouse position
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'contain',
+    transform: 'translate(-50%, -50%)', // Center the cursor on the mouse position
   };
 
   // this CSS to hide the default cursor for this element only
@@ -66,8 +66,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
       <div
         className="custom-cursor-element"
         onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      >
+        onMouseLeave={handleMouseLeave}>
         {children}
       </div>
       <style>{styles}</style>

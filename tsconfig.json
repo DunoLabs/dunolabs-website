@@ -18,6 +18,7 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",

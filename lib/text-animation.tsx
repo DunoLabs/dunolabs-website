@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useAnimation, Variants } from "framer-motion";
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, useAnimation, Variants } from 'framer-motion';
 
 type TextAnimationProps = {
   children: string | string[] | React.ReactNode;
@@ -19,12 +19,12 @@ const TextAnimation: React.FC<TextAnimationProps> = ({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !animationTriggered) {
-            controls.start("visible");
+            controls.start('visible');
             setAnimationTriggered(true);
           }
         });
       },
-      { threshold }
+      { threshold },
     );
 
     if (textRef.current) {
@@ -51,8 +51,8 @@ const TextAnimation: React.FC<TextAnimationProps> = ({
 
   let text: React.ReactNode[];
 
-  if (typeof children === "string") {
-    text = children.trim().split("");
+  if (typeof children === 'string') {
+    text = children.trim().split('');
   } else {
     text = React.Children.toArray(children);
   }
@@ -68,8 +68,7 @@ const TextAnimation: React.FC<TextAnimationProps> = ({
           transition={{
             duration: 0.5,
             delay: index * 0.01,
-          }}
-        >
+          }}>
           {character}
         </motion.span>
       ))}
@@ -78,4 +77,3 @@ const TextAnimation: React.FC<TextAnimationProps> = ({
 };
 
 export default TextAnimation;
-

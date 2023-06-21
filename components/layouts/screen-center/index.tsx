@@ -1,4 +1,4 @@
-import { cn } from "lib/utils";
+import { cn } from 'lib/utils';
 
 interface ScreenCenterProps {
   children: React.ReactNode;
@@ -14,11 +14,10 @@ const ScreenCenter: React.FC<ScreenCenterProps> = ({
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center min-h-screen mx-auto max-w-7xl ",
-        className
+        'flex flex-col items-center justify-center min-h-screen mx-auto max-w-7xl ',
+        className,
       )}
-      {...attr}
-    >
+      {...attr}>
       {children}
     </div>
   );
