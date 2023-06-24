@@ -4,10 +4,11 @@ import ViewContainer from '@/components/layouts/view-container';
 import Fixed from '@/components/layouts/fixed';
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
+import { cn } from '@/lib/cn';
 
 const Header = () => {
   return (
-    <Fixed>
+    <Fixed className={cn("h-fit")}>
       <ViewContainer>
         <div className="my-5 border-2 rounded-full sm:px-10 w-100 backdrop-blur bg-white/60 px-7">
           <div className="flex items-center justify-between h-14 sm:h-16 ">
