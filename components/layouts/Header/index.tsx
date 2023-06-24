@@ -1,7 +1,7 @@
 import Button from '@/components/ui/buttons';
 import { NavTabs } from '@/components/ui/nav-tabs';
 import ViewContainer from '@/components/layouts/view-container';
-import Fixed from '@/lib/fixed';
+import Fixed from '@/components/layouts/fixed';
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
