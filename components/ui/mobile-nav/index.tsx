@@ -5,7 +5,7 @@ import {
   MenubarMenu,
   MenubarSeparator,
   MenubarTrigger,
-} from 'components/ui/menu-bar';
+} from '@/components/ui/menu-bar';
 import { Url } from 'url';
 
 interface MenuItem {

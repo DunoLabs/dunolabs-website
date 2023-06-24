@@ -1,12 +1,12 @@
 import React from 'react';
-import HeadingBanner from 'components/ui/heading-banner';
-import ViewContainer from '../view-container';
+import HeadingBanner from '@/components/ui/heading-banner';
+import ViewContainer from '@/components/layouts/view-container';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from 'components/ui/accordion';
+} from '@/components/ui/accordion';
 
 interface FAQItem {
   question: string;

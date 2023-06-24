@@ -1,13 +1,13 @@
 import React from 'react';
-import ViewContainer from 'components/layouts/view-container';
+import ViewContainer from '@/components/layouts/view-container';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from 'components/ui/accordion';
-import HeadingBanner from 'components/ui/heading-banner';
-import { Badge } from 'components/ui/badge';
+} from '@/components/ui/accordion';
+import HeadingBanner from '@/components/ui/heading-banner';
+import { Badge } from '@/components/ui/badge';
 
 interface OurServicesItem {
   item: string;
@@ -60,7 +60,7 @@ const OurServices: React.FC = () => {
                 </span>
               </p>
               <HeadingBanner
-                title="Tough challenges? Take it easy! We’ll assist you."
+                title="Tough challenges? Take it easy! We'll assist you."
                 description="We are a team of passionate developers and designers who are dedicated to creating the best possible user experience for our clients."
                 links={[
                   {

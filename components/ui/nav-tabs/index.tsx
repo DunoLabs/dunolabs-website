@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 
-import { cn } from 'lib/utils';
+import { cn } from '@/lib/cn';
 
 import {
   NavigationMenu,
@@ -13,7 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from 'components/ui/navigation-menu';
+} from '@/components/ui/navigation-menu';
 import { Url } from 'url';
 
 interface MenuItem {

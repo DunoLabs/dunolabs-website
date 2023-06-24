@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { cn } from './utils';
+import { cn } from '@/lib/cn';
 
 interface CustomCursorProps extends React.HTMLAttributes<HTMLDivElement> {
   image: string;

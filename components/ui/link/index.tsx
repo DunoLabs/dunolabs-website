@@ -1,4 +1,4 @@
-import { cn } from 'lib/utils';
+import { cn } from '@/lib/cn';
 import { VariantProps, cva } from 'class-variance-authority';
 
 const LinkVarient = cva(' border-b-2 ', {

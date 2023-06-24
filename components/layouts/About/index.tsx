@@ -1,9 +1,9 @@
 import React from 'react';
-import ViewContainer from 'components/layouts/view-container';
-import Separator from 'components/ui/seperator';
-import Button from 'components/ui/buttons';
+import ViewContainer from '@/components/layouts/view-container';
+import Separator from '@/components/ui/seperator';
+import Button from '@/components/ui/buttons';
 import Image from 'next/image';
-import HeadingBanner from 'components/ui/heading-banner';
+import HeadingBanner from '@/components/ui/heading-banner';
 
 interface Link {
   href: string;
@@ -43,7 +43,7 @@ const About: React.FC = () => {
 
           <div className="flex flex-col items-end justify-end">
             <Image
-              src="/media/about.png"
+              src="/media/old-macintosh.png"
               className="transition-all duration-500 grayscale hover:grayscale-0"
               alt="about"
               width={500}

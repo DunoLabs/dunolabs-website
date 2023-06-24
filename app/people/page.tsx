@@ -1,9 +1,9 @@
-import Layout from 'components/layouts';
-import Footer from 'components/layouts/footer';
+import Layout from '@/components/layouts';
+import Footer from '@/components/layouts/footer';
 
-import ViewContainer from 'components/layouts/view-container';
-import Button from 'components/ui/buttons';
-import CTA from 'components/ui/cta';
+import ViewContainer from '@/components/layouts/view-container';
+import Button from '@/components/ui/buttons';
+import CTA from '@/components/ui/cta';
 import {
   Card,
   CardContent,
@@ -11,8 +11,8 @@ import {
   CardHeader,
   CardId,
   CardTitle,
-} from 'components/ui/card';
-import HeadingBanner from 'components/ui/heading-banner';
+} from '@/components/ui/card';
+import HeadingBanner from '@/components/ui/heading-banner';
 import { ArrowUpRight } from 'lucide-react';
 
 const CardData = [

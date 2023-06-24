@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { cn } from './utils';
+import { cn } from '@/lib/cn';
 
 interface FixedProps {
   children: React.ReactNode;
