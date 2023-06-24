@@ -1,11 +1,11 @@
-import Layout from 'components/layouts';
-import Footer from 'components/layouts/footer';
-import ViewContainer from 'components/layouts/view-container';
-import Button from 'components/ui/buttons';
-import CTA from 'components/ui/cta';
-import Calendar from 'components/ui/calendar';
-import HeadingBanner from 'components/ui/heading-banner';
-import Marquee from 'components/ui/marquee';
+import Layout from '@/components/layouts';
+import Footer from '@/components/layouts/footer';
+import ViewContainer from '@/components/layouts/view-container';
+import Button from '@/components/ui/buttons';
+import CTA from '@/components/ui/cta';
+import Calendar from '@/components/ui/calendar';
+import HeadingBanner from '@/components/ui/heading-banner';
+import Marquee from '@/components/ui/marquee';
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 

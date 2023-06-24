@@ -1,8 +1,8 @@
-import Button from 'components/ui/buttons';
-import { NavTabs } from 'components/ui/nav-tabs';
+import Button from '@/components/ui/buttons';
+import { NavTabs } from '@/components/ui/nav-tabs';
+import ViewContainer from '@/components/layouts/view-container';
+import Fixed from '@/lib/fixed';
 import { ArrowUpRight } from 'lucide-react';
-import Fixed from 'lib/fixed';
-import ViewContainer from 'components/layouts/view-container';
 import Link from 'next/link';
 
 const Header = () => {
