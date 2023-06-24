@@ -60,7 +60,7 @@ const OurServices: React.FC = () => {
                 </span>
               </p>
               <HeadingBanner
-                title="Tough challenges? Take it easy! We’ll assist you."
+                title="Tough challenges? Take it easy! We'll assist you."
                 description="We are a team of passionate developers and designers who are dedicated to creating the best possible user experience for our clients."
                 links={[
                   {

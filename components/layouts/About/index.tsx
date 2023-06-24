@@ -43,7 +43,7 @@ const About: React.FC = () => {
 
           <div className="flex flex-col items-end justify-end">
             <Image
-              src="/media/about.png"
+              src="/media/old-macintosh.png"
               className="transition-all duration-500 grayscale hover:grayscale-0"
               alt="about"
               width={500}
