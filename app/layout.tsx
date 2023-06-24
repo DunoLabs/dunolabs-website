@@ -1,13 +1,13 @@
-import './globals.css'
+import './globals.css';
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={"app-container"}>{children}</body>
+      <body className={'app-container'}>{children}</body>
     </html>
-  )
+  );
 }
