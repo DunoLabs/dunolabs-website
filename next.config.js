@@ -1,18 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-};
+const nextConfig = {}
 
-module.exports = nextConfig;
-
-module.exports = {
-  // ...
-  async rewrites() {
-    return [
-      {
-        source: '/fonts/:slug*',
-        destination: '/fonts/:slug*',
-      },
-    ];
-  },
-};
+module.exports = nextConfig
