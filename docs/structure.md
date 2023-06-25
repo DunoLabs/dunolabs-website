@@ -16,4 +16,4 @@ In case of any issues while setting up local environments, or installing depende
 
 Have fun working! Don't forget to have a cup of coffee ready before getting started with work ☕️
 
-![proceed-gif](public/media/proceed-continue.gif)
+![proceed-gif](../public/media/proceed-continue.gif)
