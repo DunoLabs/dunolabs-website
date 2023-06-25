@@ -1,9 +1,9 @@
-import React from "react";
-import ViewContainer from "components/layouts/ViewContainer";
-import Separator from "components/ui/Seperator";
-import Button from "components/ui/Buttons";
-import Image from "next/image";
-import HeadingBanner from "components/ui/HeadingBanner";
+import React from 'react';
+import ViewContainer from '@/components/layouts/view-container';
+import Separator from '@/components/ui/seperator';
+import Button from '@/components/ui/buttons';
+import Image from 'next/image';
+import HeadingBanner from '@/components/ui/heading-banner';
 
 interface Link {
   href: string;
@@ -11,7 +11,7 @@ interface Link {
 }
 
 const About: React.FC = () => {
-  const links: Link[] = [{ href: "/about", text: "learn more" }];
+  const links: Link[] = [{ href: '/about', text: 'learn more' }];
 
   return (
     <div className="relative py-24 bg-zinc-900 sm:py-32">
@@ -29,8 +29,7 @@ const About: React.FC = () => {
         <div className="absolute  flex items-center py-4 text-zinc-50 rounded-full -top-[2.2rem]">
           <Button
             className="left-0 p-4 rounded-full text-zinc-50 bg-zinc-900"
-            border="borderLight"
-          >
+            border="borderLight">
             LET'S FIND OUT MORE ABOUT US
           </Button>
         </div>
@@ -44,7 +43,7 @@ const About: React.FC = () => {
 
           <div className="flex flex-col items-end justify-end">
             <Image
-              src="/media/about.png"
+              src="/media/old-macintosh.png"
               className="transition-all duration-500 grayscale hover:grayscale-0"
               alt="about"
               width={500}

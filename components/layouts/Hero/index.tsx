@@ -1,5 +1,5 @@
-import ViewContainer from "components/layouts/ViewContainer";
-import TextAnimation from "lib/TextAnimation";
+import ViewContainer from '@/components/layouts/view-container';
+import TextAnimation from '@/components/ui/text-animation';
 
 const Hero = () => {
   return (

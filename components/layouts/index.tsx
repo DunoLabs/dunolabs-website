@@ -1,6 +1,6 @@
-import React from "react";
-import Header from "components/layouts/Header";
-import MobileNav from "components/ui/MobileNav";
+import React from 'react';
+import Header from '@/components/layouts/header';
+import MobileNav from '@/components/ui/mobile-nav';
 
 interface LayoutProps {
   children: React.ReactNode;

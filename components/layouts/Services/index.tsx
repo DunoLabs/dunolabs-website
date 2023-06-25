@@ -1,13 +1,13 @@
-import React from "react";
-import ViewContainer from "components/layouts/ViewContainer";
+import React from 'react';
+import ViewContainer from '@/components/layouts/view-container';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "components/ui/Accordion";
-import HeadingBanner from "components/ui/HeadingBanner";
-import { Badge } from "components/ui/Badge";
+} from '@/components/ui/accordion';
+import HeadingBanner from '@/components/ui/heading-banner';
+import { Badge } from '@/components/ui/badge';
 
 interface OurServicesItem {
   item: string;
@@ -18,32 +18,32 @@ interface OurServicesItem {
 
 const OurServicesList: OurServicesItem[] = [
   {
-    item: "item-1",
-    title: "UX / UI Design",
+    item: 'item-1',
+    title: 'UX / UI Design',
     content:
-      "We design beautiful and functional interfaces, from scratch or based on your existing design.",
-    status: "active",
+      'We design beautiful and functional interfaces, from scratch or based on your existing design.',
+    status: 'active',
   },
   {
-    item: "item-2",
-    title: "Product Design",
+    item: 'item-2',
+    title: 'Product Design',
     content:
-      "We design beautiful and functional interfaces, from scratch or based on your existing design.",
-    status: "active",
+      'We design beautiful and functional interfaces, from scratch or based on your existing design.',
+    status: 'active',
   },
   {
-    item: "item-3",
-    title: "Web Development",
+    item: 'item-3',
+    title: 'Web Development',
     content:
-      "We provide you with better and modern web interfaces for your company website and web products.",
-    status: "active",
+      'We provide you with better and modern web interfaces for your company website and web products.',
+    status: 'active',
   },
   {
-    item: "item-4",
-    title: "App Development",
+    item: 'item-4',
+    title: 'App Development',
     content:
-      "We build mobile apps for iOS and Android, using the latest technologies.",
-    status: "coming soon",
+      'We build mobile apps for iOS and Android, using the latest technologies.',
+    status: 'coming soon',
   },
 ];
 
@@ -60,13 +60,13 @@ const OurServices: React.FC = () => {
                 </span>
               </p>
               <HeadingBanner
-                title="Tough challenges? Take it easy! We’ll assist you."
+                title="Tough challenges? Take it easy! We'll assist you."
                 description="We are a team of passionate developers and designers who are dedicated to creating the best possible user experience for our clients."
                 links={[
                   {
-                    text: "View all services",
-                    linkVariant: "linkDark",
-                    href: "/services", // Add the href property
+                    text: 'View all services',
+                    linkVariant: 'linkDark',
+                    href: '/services', // Add the href property
                   },
                 ]}
               />
@@ -75,21 +75,18 @@ const OurServices: React.FC = () => {
               <Accordion
                 type="single"
                 collapsible
-                className="sm:w-[28rem] w-full"
-              >
+                className="sm:w-[28rem] w-full">
                 {OurServicesList.map((item) => (
                   <AccordionItem
                     value={item.item}
                     className="py-3"
-                    key={item.item}
-                  >
+                    key={item.item}>
                     <AccordionTrigger className="text-lg uppercase sm:text-xl hover:no-underline">
-                      {item.title}{" "}
-                      {item.status === "coming soon" ? (
+                      {item.title}{' '}
+                      {item.status === 'coming soon' ? (
                         <Badge
                           className="ml-2 bg-zinc-900 text-zinc-50"
-                          variant={"default"}
-                        >
+                          variant={'default'}>
                           {item.status}
                         </Badge>
                       ) : null}
