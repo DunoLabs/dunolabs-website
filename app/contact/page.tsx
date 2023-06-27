@@ -20,8 +20,16 @@ const Contact = () => {
               className="mt-10 text-zinc-50">
               <p className="mt-10 text-lg sm:text-xl text-gray">
                 If you have a specific project, a rough idea, or a belief in a
-                partnership that you want to discuss with us, sumit loves to
-                read your mail.
+                partnership that you want to discuss with us,{' '}
+                <span>
+                  <a
+                    href="https://twitter.com/wh0sumit"
+                    target={'_blank'}
+                    className="border-b-2">
+                    @sumit
+                  </a>
+                </span>{' '}
+                loves to read your mail.
               </p>
 
               <div className="my-10 contact-info">
@@ -29,7 +37,7 @@ const Contact = () => {
                   Email:{' '}
                   <Link
                     href={`mailto:dunolabs@gmail.com`}
-                    className="lowercase text-zinc-50"
+                    className="lowercase border-b-2 text-zinc-50"
                     target="_blank">
                     dunolabs@gmail.com
                   </Link>
