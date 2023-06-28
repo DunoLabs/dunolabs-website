@@ -26,7 +26,9 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
 }) => {
   return (
     <div className={cn(color, className)}>
-      <h2 className="my-5 text-5xl font-extrabold sm:text-7xl">{title}</h2>
+      <h2 className="my-5 text-5xl font-extrabold sm:text-7xl loading-text">
+        {title}
+      </h2>
       <p className="mt-10">
         <span className="text-lg sm:text-xl text-gray"> {description}</span>
       </p>

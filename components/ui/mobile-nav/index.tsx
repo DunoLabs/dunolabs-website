@@ -27,6 +27,10 @@ const menu: MenuCategory[] = [
     href: '/',
   },
   {
+    title: 'about.',
+    href: '/about',
+  },
+  {
     title: 'people.',
     href: '/people',
   },
