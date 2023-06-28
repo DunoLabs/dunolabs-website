@@ -7,7 +7,7 @@ body {
 }
 
 ::selection {
-  @apply bg-pink-600 text-white;
+  @apply text-white bg-pink-600;
 }
 
 .marquee {
@@ -46,6 +46,9 @@ body {
 .marquee:hover .marquee__group {
   animation-play-state: paused;
 }
+
+
+
 
 @keyframes scroll {
   0% {
@@ -100,3 +103,4 @@ body {
     opacity: 1;
   }
 }
+
