@@ -12,7 +12,6 @@ const Home = () => {
   return (
     <Layout>
       <Hero />
-
       <About />
       <OurServices />
       <Marquee text="Contact us Now" className="bg-zinc-900 text-zinc-50 " />
