@@ -6,9 +6,7 @@ interface EmbedProps {
 
 const Embed: React.FC<EmbedProps> = ({ imageSource }) => {
   return (
-    <Head>
-      
-    </Head>
+    <></>
   )
 };
 
