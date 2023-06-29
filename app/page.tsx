@@ -7,18 +7,22 @@ import Marquee from '@/components/ui/marquee';
 import FAQ from '@/components/layouts/faq';
 import Footer from '@/components/layouts/footer';
 import Layout from '@/components/layouts';
+import SEO from '@/components/seo';
 
 const Home = () => {
   return (
-    <Layout>
-      <Hero />
-      <About />
-      <OurServices />
-      <Marquee text="Contact us Now" className="bg-zinc-900 text-zinc-50 " />
-      <FAQ />
-      <CTA />
-      <Footer />
-    </Layout>
+    <>
+      <SEO />
+      <Layout>
+        <Hero />
+        <About />
+        <OurServices />
+        <Marquee text="Contact us Now" className="bg-zinc-900 text-zinc-50 " />
+        <FAQ />
+        <CTA />
+        <Footer />
+      </Layout>
+    </>
   );
 };
 
