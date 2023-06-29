@@ -1,5 +1,5 @@
-import Head from "next/head";
-import WebsiteIcon from "./website-icon";
+import Head from 'next/head';
+import WebsiteIcon from './website-icon';
 
 interface SEOProps extends React.MetaHTMLAttributes<HTMLMetaElement> {
   title?: string;
@@ -7,10 +7,19 @@ interface SEOProps extends React.MetaHTMLAttributes<HTMLMetaElement> {
   keywords?: string[];
 }
 
-const SEO: React.FC<SEOProps> = ({ 
-  title="Dunolabs", 
-  description="we're building the next generation's micro-saas tools, websites & products.", 
-  keywords=["indore", "web-design", "frontend", "user-experience", "design", "dunolabs", "sass", "products"]
+const SEO: React.FC<SEOProps> = ({
+  title = 'Dunolabs',
+  description = "we're building the next generation's micro-saas tools, websites & products.",
+  keywords = [
+    'indore',
+    'web-design',
+    'frontend',
+    'user-experience',
+    'design',
+    'dunolabs',
+    'sass',
+    'products',
+  ],
 }) => {
   return (
     <Head>
@@ -22,7 +31,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:type" content="website" />
       <meta property="og:description" content={description} />
     </Head>
-  )
+  );
 };
 
 export default SEO;

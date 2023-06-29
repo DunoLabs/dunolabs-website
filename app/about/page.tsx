@@ -43,7 +43,10 @@ const photos: Photo[] = [
 const AboutPage: React.FC = () => {
   return (
     <>
-      <SEO title={"About"} description={"who we are: the crazy minds behind the madness"} />
+      <SEO
+        title={'About'}
+        description={'who we are: the crazy minds behind the madness'}
+      />
       <Layout>
         {' '}
         <div className="py-24 bg-zinc-900 sm:py-40">
@@ -54,10 +57,10 @@ const AboutPage: React.FC = () => {
               <div className="max-w-3xl">
                 <p className="mt-10">
                   <span className="text-lg sm:text-xl text-gray">
-                    We are a group of people who believe that the products can be
-                    beauitful and functional at the same time, and that the
-                    process of building them can be fun and rewarding for everyone
-                    involved.
+                    We are a group of people who believe that the products can
+                    be beauitful and functional at the same time, and that the
+                    process of building them can be fun and rewarding for
+                    everyone involved.
                   </span>
                 </p>
               </div>
@@ -106,10 +109,10 @@ const AboutPage: React.FC = () => {
                 </p>
                 <p className="mt-10">
                   <span className="text-lg sm:text-xl text-gray">
-                    We are a group of people who believe that the products can be
-                    beauitful and functional at the same time, and that the
-                    process of building them can be fun and rewarding for everyone
-                    involved.
+                    We are a group of people who believe that the products can
+                    be beauitful and functional at the same time, and that the
+                    process of building them can be fun and rewarding for
+                    everyone involved.
                   </span>
                 </p>
               </div>
@@ -135,18 +138,18 @@ const AboutPage: React.FC = () => {
                 </p>
                 <p className="mt-10">
                   <span className="text-lg sm:text-xl text-gray">
-                    We firmly believe that actions speak louder than words, and we
-                    are determined to turn our vision into reality. Once we
-                    accomplish what we have planned, we will proudly unveil a new
-                    website design with vibrant colors that reflect our
+                    We firmly believe that actions speak louder than words, and
+                    we are determined to turn our vision into reality. Once we
+                    accomplish what we have planned, we will proudly unveil a
+                    new website design with vibrant colors that reflect our
                     achievements.
                   </span>
                 </p>{' '}
                 <p className="mt-10">
                   <span className="text-lg sm:text-xl text-gray">
-                    We invite you to join us on this extraordinary journey and be
-                    a part of making our vision come true. We combine hard work
-                    and smart strategies to make things happen, and we are
+                    We invite you to join us on this extraordinary journey and
+                    be a part of making our vision come true. We combine hard
+                    work and smart strategies to make things happen, and we are
                     confident that we will succeed.
                   </span>
                 </p>{' '}

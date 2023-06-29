@@ -47,9 +47,6 @@ body {
   animation-play-state: paused;
 }
 
-
-
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -103,4 +100,3 @@ body {
     opacity: 1;
   }
 }
-
