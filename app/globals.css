@@ -7,7 +7,7 @@ body {
 }
 
 ::selection {
-  @apply bg-pink-600 text-white;
+  @apply text-white bg-pink-600;
 }
 
 .marquee {
