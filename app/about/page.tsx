@@ -1,7 +1,7 @@
 import Layout from '@/components/layouts';
 import Footer from '@/components/layouts/footer';
 import ViewContainer from '@/components/layouts/view-container';
-import SEO from '@/components/seo';
+import MetaHead from '@/components/seo/meta-head';
 import CTA from '@/components/ui/cta';
 import HeadingBanner from '@/components/ui/heading-banner';
 import Marquee from '@/components/ui/marquee';
@@ -43,10 +43,7 @@ const photos: Photo[] = [
 const AboutPage: React.FC = () => {
   return (
     <>
-      <SEO
-        title={'About'}
-        description={'who we are: the crazy minds behind the madness'}
-      />
+      <MetaHead />
       <Layout>
         {' '}
         <div className="py-24 bg-zinc-900 sm:py-40">

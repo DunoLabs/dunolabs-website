@@ -7,12 +7,12 @@ import Marquee from '@/components/ui/marquee';
 import FAQ from '@/components/layouts/faq';
 import Footer from '@/components/layouts/footer';
 import Layout from '@/components/layouts';
-import SEO from '@/components/seo';
+import MetaHead from './components/seo/meta-head';
 
 const Home = () => {
   return (
     <>
-      <SEO />
+      <MetaHead />
       <Layout>
         <Hero />
         <About />
