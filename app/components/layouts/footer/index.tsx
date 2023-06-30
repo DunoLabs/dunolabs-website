@@ -1,7 +1,8 @@
 import ViewContainer from '@/components/layouts/view-container';
 import Separator from '@/components/ui/seperator';
 
-import { Instagram, Link, Linkedin, Twitter } from 'lucide-react';
+import { Instagram, Linkedin, Twitter } from 'lucide-react';
+import Link from 'next/link';
 
 const FooterLinks = [
   {
@@ -41,20 +42,20 @@ const Footer: React.FC = () => {
             </span>
           </p>
           <div className="flex flex-wrap items-center justify-center w-full h-full gap-6 mt-4 sm:justify-around sm:w-1/6 ">
-            <Link href="https://www.instagram.com/dunolabs">
+            <Link href="https://www.instagram.com/dunolabs" target={"_blank"}>
               <Instagram
                 size={24}
                 className="mx-4 text-lg border-0 hover:border-b-2 text-zinc-50 hover:text-zinc-100 sm:mx-0"
               />
             </Link>
-            <Link href="https://www.twitter.com/dunolabs">
+            <Link href="https://www.twitter.com/dunolabs" target={"_blank"}>
               <Twitter
                 size={24}
                 className="mx-4 text-lg border-0 hover:border-b-2 text-zinc-50 hover:text-zinc-100 sm:mx-0"
               />
             </Link>
 
-            <Link href="https://www.linkedin.com/company/dunolabs">
+            <Link href="https://www.linkedin.com/company/dunolabs" target={"_blank"}>
               <Linkedin
                 size={24}
                 className="mx-4 text-lg border-0 hover:border-b-2 text-zinc-50 hover:text-zinc-100 sm:mx-0"
