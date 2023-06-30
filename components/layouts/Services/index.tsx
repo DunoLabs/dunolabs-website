@@ -62,13 +62,14 @@ const OurServices: React.FC = () => {
               <HeadingBanner
                 title="Tough challenges? Take it easy! We'll assist you."
                 description="We are a team of passionate developers and designers who are dedicated to creating the best possible user experience for our clients."
-                links={[
-                  {
-                    text: 'View all services',
-                    linkVariant: 'linkDark',
-                    href: '/services', // Add the href property
-                  },
-                ]}
+                // Removing services link temporarily
+                // links={[
+                //   {
+                //     text: 'View all services',
+                //     linkVariant: 'linkDark',
+                //     href: '/services', // Add the href property
+                //   },
+                // ]}
               />
             </div>
             <div className="sm:w-[28rem] w-full">

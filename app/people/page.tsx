@@ -15,7 +15,13 @@ import {
 import HeadingBanner from '@/components/ui/heading-banner';
 import { ArrowUpRight } from 'lucide-react';
 
-const CardData = [
+interface CardProps {
+  id: string;
+  title: string;
+  description: string;
+}
+
+const CardData: CardProps[] = [
   {
     id: '01',
     title: 'Team players only',

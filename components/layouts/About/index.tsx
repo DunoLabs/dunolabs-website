@@ -27,9 +27,7 @@ const About: React.FC = () => {
 
       <ViewContainer>
         <div className="absolute  flex items-center py-4 text-zinc-50 rounded-full -top-[2.2rem]">
-          <Button
-            className="left-0 p-4 rounded-full text-zinc-50 bg-zinc-900"
-            border="borderLight">
+          <Button className="left-0 p-4 rounded-full text-zinc-50 bg-zinc-900">
             LET'S FIND OUT MORE ABOUT US
           </Button>
         </div>
