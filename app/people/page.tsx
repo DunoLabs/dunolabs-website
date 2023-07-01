@@ -61,7 +61,7 @@ const CardData: CardProps[] = [
   {
     id: '07',
     title: 'No assholes',
-    description: 'We don’t work for clients that don’t share our values.',
+    description: 'We don’t work with people who don’t share our values.',
   },
 ];
 
