@@ -75,7 +75,7 @@ const People: React.FC = () => {
             className="mt-10 text-zinc-50">
             <div className="max-w-3xl">
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray">
+                <span className="text-lg sm:text-xl text-gray ">
                   we believe that there&apos;s more to a great company than just
                   flashy perks. Instead of playing HR bingo, we&apos;re focused
                   on delivering real value to our clients. Our team is
@@ -87,7 +87,7 @@ const People: React.FC = () => {
                 </span>
               </p>
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray">
+                <span className="text-lg sm:text-xl text-gray ">
                   We believe that our success is tied to our clients&apos;
                   success, which is why we&apos;re dedicated to building
                   long-term relationships based on trust, transparency, and
@@ -115,7 +115,7 @@ const People: React.FC = () => {
             className="max-w-4xl mt-10 text-zinc-900">
             <div className="max-w-3xl">
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray">
+                <span className="text-lg sm:text-xl text-gray ">
                   You only have one life (unless you&apos;re a cat), so
                   there&apos;s no need to spend your entire week working if you
                   don&apos;t want to. The amount of time you choose to work is
@@ -183,7 +183,7 @@ const People: React.FC = () => {
             ]}>
             <div className="max-w-3xl">
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray">
+                <span className="text-lg sm:text-xl text-gray ">
                   It&apos;s a pity, but of course, you can send us your
                   speculative application to dunolabs@gmail.com or apply via our
                   work page :

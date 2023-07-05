@@ -17,7 +17,7 @@ const CTA: React.FC = () => {
           ]}>
           <div className="max-w-3xl mt-10">
             <p className="mt-10">
-              <span className="text-lg sm:text-xl text-gray">
+              <span className="text-lg sm:text-xl text-gray ">
                 we specialize in building human-centered systems that solve
                 real-world problems. We understand that you know your customers
                 and industry best, and that&apos;s why we believe in
@@ -26,7 +26,7 @@ const CTA: React.FC = () => {
               </span>
             </p>
             <p className="mt-10">
-              <span className="text-lg sm:text-xl text-gray">
+              <span className="text-lg sm:text-xl text-gray ">
                 Whether you have a specific project in mind or just a rough
                 idea, we would love to hear from you. So, if you&apos;re ready
                 to take your digital product to the next level, drop us a line
@@ -35,7 +35,7 @@ const CTA: React.FC = () => {
             </p>
 
             <p className="mt-10">
-              <span className="text-lg sm:text-xl text-gray">
+              <span className="text-lg sm:text-xl text-gray ">
                 By the way: If you would like to talk to us in Hindi,
                 that&apos;s fine. We do speak Hindi too.
               </span>

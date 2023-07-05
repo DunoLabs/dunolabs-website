@@ -48,7 +48,7 @@ const About: React.FC = () => {
               height={200}
             />
             <p className="w-full my-10 text-lg text-zinc-50 sm:w-1/3 text-end">
-              <span className="text-lg sm:text-xl text-gray">
+              <span className="text-lg sm:text-xl text-gray ">
                 By putting people first, we aim to create a company that not
                 only delivers exceptional products and services but also makes a
                 positive impact on the world around us.

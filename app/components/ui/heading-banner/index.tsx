@@ -30,7 +30,7 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
         {title}
       </h2>
       <p className="mt-10">
-        <span className="text-lg sm:text-xl text-gray"> {description}</span>
+        <span className="text-lg sm:text-xl text-gray "> {description}</span>
       </p>
       {children}
       {links &&
