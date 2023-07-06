@@ -48,7 +48,7 @@ const About: React.FC = () => {
               height={200}
             />
             <p className="w-full my-10 text-lg text-zinc-50 sm:w-1/3 text-end">
-              <span className="text-lg sm:text-xl text-gray ">
+              <span className="text-lg sm:text-xl text-gray">
                 By putting people first, we aim to create a company that not
                 only delivers exceptional products and services but also makes a
                 positive impact on the world around us.
@@ -56,7 +56,13 @@ const About: React.FC = () => {
             </p>
           </div>
           <div className="flex items-center justify-center">
-            <span className="text-zinc-50">2023</span>
+            <span className="uppercase text-zinc-50">
+              {' '}
+              {new Date().toLocaleDateString('en-US', {
+                month: 'long',
+                year: 'numeric',
+              })}
+            </span>
             <Separator className="mx-3" />
             <span className="italic font-semibold text-zinc-50 text-end">
               the more you fuck around, the more you're gonna find out !!

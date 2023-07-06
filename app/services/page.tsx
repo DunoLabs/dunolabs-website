@@ -5,8 +5,16 @@ import { Badge } from '@/components/ui/badge';
 import CTA from '@/components/ui/cta';
 import HeadingBanner from '@/components/ui/heading-banner';
 import Marquee from '@/components/ui/marquee';
-import Separator from '@/components/ui/seperator';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardId,
+  CardTitle,
+} from '@/components/ui/card';
 import Link from 'next/link';
+import Separator from '@/components/ui/seperator';
 
 interface Service {
   title: string;
@@ -28,8 +36,7 @@ const ServicesItems: ServiceItem[] = [
       'We build websites and web applications that are fast, secure, and easy to manage. We use the latest technologies to build websites that are responsive, mobile-friendly, and SEO optimized.',
     services: [
       { title: 'Web Application', status: 'active' },
-      { title: 'Web Platform', status: 'active' },
-      { title: 'Software as a Service (SaaS)', status: 'active' },
+      { title: 'Software as a Service (SaaS)', status: 'new' },
       { title: 'Internal Tools & Dashboards', status: 'active' },
       { title: 'Content Management System (CMS)', status: 'active' },
       { title: 'Corporate and Storytelling Websites', status: 'active' },
@@ -50,7 +57,7 @@ const ServicesItems: ServiceItem[] = [
       { title: 'User Experience (UX) Design', status: 'active' },
       { title: 'User Interface (UI) Design', status: 'active' },
       { title: 'Wireframing', status: 'active' },
-      { title: 'Prototyping', status: 'active' },
+      { title: 'Prototyping', status: 'coming soon' },
       { title: 'Mobile App Design', status: 'new' },
       { title: 'Web App Design', status: 'active' },
       { title: 'Responsive Design', status: 'active' },
@@ -59,18 +66,51 @@ const ServicesItems: ServiceItem[] = [
   },
 ];
 
+interface ComponentData {
+  id: string;
+  title: string;
+  description: string;
+}
+
+const ComponentData: ComponentData[] = [
+  {
+    id: '01',
+    title: 'Outstanding outcomes require nurturing.',
+    description:
+      'Creating brilliance demands dedication, attention to detail, and time. At Dunolabs, we invest the necessary effort to deliver exceptional products that respect our users.',
+  },
+  {
+    id: '02',
+    title: 'Transparency: What you see is what you get.',
+    description:
+      'We collaborate with you as a unified team, providing full access to our project management processes, software, and design tools. You can even view the software code.',
+  },
+  {
+    id: '03',
+    title: 'Agile is the way to valuable software.',
+    description:
+      'We embrace the Agile Manifesto, primarily using Scrum for medium or large-scale projects. However, we maintain an agile mindset even when employing traditional methodologies.',
+  },
+  {
+    id: '04',
+    title: 'Data privacy is non-negotiable.',
+    description:
+      'We prioritize user privacy, adhering to data privacy principles and GDPR guidelines. Privacy by design and default are essential requirements in all the websites and apps we develop.',
+  },
+];
+
 const ServiceItem = ({ title, description, id, services }: ServiceItem) => (
   <div key={id}>
     <h3 className="text-3xl font-bold uppercase text-zinc-900">{title}</h3>
-    <p className="mt-10">
+    {/* <p className="mt-10">
       <span className="text-lg sm:text-xl text-gray "> {description}</span>
-    </p>
+    </p> */}
 
     <ul className="px-10 list-disc my-14">
       {services.map((service) => (
         <li
           key={service.title}
-          className="my-5 text-xl transition-all duration-300 text-zinc-800 hover:text-zinc-900 hover:underline hover:translate-x-2">
+          className="my-5 text-xl text-zinc-800 hover:text-zinc-900 hover:underline ">
           {service.title}
           {service.status === 'new' || service.status === 'coming soon' ? (
             <Badge
@@ -121,10 +161,22 @@ const Services: React.FC = () => {
               ))}
             </div>
           </div>
+          <div className="flex items-center justify-center mt-20">
+            <span className="uppercase text-zinc-900">
+              {new Date().toLocaleDateString('en-US', {
+                month: 'long',
+                year: 'numeric',
+              })}
+            </span>
+            <Separator className="mx-3 text-zinc-900" />
+            <span className="italic font-semibold text-zinc-900 text-end">
+              don't worry we launching more services soon !
+            </span>
+          </div>
         </ViewContainer>
       </div>
 
-      <div className="py-10 bg-zinc-900 sm:py-32">
+      <div className="py-10 bg-zinc-900 sm:py-20">
         <ViewContainer>
           <HeadingBanner
             title="Say Goodbye to Average: Elevate Your Brand with Us Today!"
@@ -150,6 +202,60 @@ const Services: React.FC = () => {
               </p>
             </div>
           </HeadingBanner>
+          <div className="flex flex-wrap mt-28">
+            <div className="w-full md:w-1/2">
+              {
+                /// add only odd cards
+                ComponentData.filter((_, index) => index % 2 === 0).map(
+                  (card) => (
+                    <Card
+                      className="w-full mb-20 border-none shadow-none sm:mb-40 sm:w-9/12 "
+                      key={card.id}>
+                      <CardHeader>
+                        <CardId className="hidden sm:flex text-zinc-50">
+                          {card.id}
+                        </CardId>
+                        <CardTitle className="mb-3 text-3xl text-zinc-50">
+                          {card.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="mt-3 text-zinc-50">
+                        <CardDescription className="text-xl ">
+                          {card.description}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
+                  ),
+                )
+              }
+            </div>
+            <div className="w-full md:w-1/2">
+              {
+                /// add only even cards
+                ComponentData.filter((_, index) => index % 2 !== 0).map(
+                  (card) => (
+                    <Card
+                      className="w-full mb-20 border-none shadow-none sm:my-40 sm:w-9/12 "
+                      key={card.id}>
+                      <CardHeader>
+                        <CardId className="hidden sm:flex text-zinc-50">
+                          {card.id}
+                        </CardId>
+                        <CardTitle className="mb-3 text-3xl text-zinc-50">
+                          {card.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="mt-3 text-zinc-50">
+                        <CardDescription className="text-xl ">
+                          {card.description}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
+                  ),
+                )
+              }
+            </div>
+          </div>
         </ViewContainer>
       </div>
       <Marquee text="Contact Now" />

@@ -153,7 +153,7 @@ const People: React.FC = () => {
                 /// add only even cards
                 CardData.filter((_, index) => index % 2 !== 0).map((card) => (
                   <Card
-                    className="w-full mt-20 border-none shadow-none sm:mt-40 sm:w-9/12"
+                    className="w-full mt-20 border-none shadow-none sm:my-40 sm:w-9/12"
                     key={card.id}>
                     <CardHeader>
                       <CardId className="hidden sm:flex">{card.id}</CardId>
