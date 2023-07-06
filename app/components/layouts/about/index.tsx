@@ -56,7 +56,13 @@ const About: React.FC = () => {
             </p>
           </div>
           <div className="flex items-center justify-center">
-            <span className="text-zinc-50">2023</span>
+            <span className="uppercase text-zinc-50">
+              {' '}
+              {new Date().toLocaleDateString('en-US', {
+                month: 'long',
+                year: 'numeric',
+              })}
+            </span>
             <Separator className="mx-3" />
             <span className="italic font-semibold text-zinc-50 text-end">
               the more you fuck around, the more you're gonna find out !!

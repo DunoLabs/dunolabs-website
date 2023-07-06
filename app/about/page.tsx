@@ -56,7 +56,7 @@ const AboutPage: React.FC = () => {
               className="max-w-4xl mt-10 text-zinc-50">
               <div className="max-w-3xl">
                 <p className="mt-10">
-                  <span className="text-lg sm:text-xl text-gray">
+                  <span className="text-lg sm:text-xl text-gray ">
                     We are a group of people who believe that the products can
                     be beauitful and functional at the same time, and that the
                     process of building them can be fun and rewarding for
@@ -101,14 +101,14 @@ const AboutPage: React.FC = () => {
               className="max-w-4xl mt-10 text-zinc-900">
               <div className="max-w-3xl">
                 <p className="mt-10">
-                  <span className="text-lg sm:text-xl text-gray">
+                  <span className="text-lg sm:text-xl text-gray ">
                     In fact, it's more like a journey with great friends. On our
                     way to our destination, sometimes we detour to exciting
                     places, but we always keep our shared vision in mind.
                   </span>
                 </p>
                 <p className="mt-10">
-                  <span className="text-lg sm:text-xl text-gray">
+                  <span className="text-lg sm:text-xl text-gray ">
                     We are a group of people who believe that the products can
                     be beauitful and functional at the same time, and that the
                     process of building them can be fun and rewarding for
@@ -127,7 +127,7 @@ const AboutPage: React.FC = () => {
               className="max-w-4xl mt-10 text-zinc-900">
               <div className="max-w-3xl">
                 <p className="mt-10">
-                  <span className="text-lg sm:text-xl text-gray">
+                  <span className="text-lg sm:text-xl text-gray ">
                     our journey began in mid-2023 with a clear vision and an
                     unwavering commitment. We made a solemn pledge to ourselves,
                     and as a reminder of that vision and pledge, we chose to
@@ -137,7 +137,7 @@ const AboutPage: React.FC = () => {
                   </span>
                 </p>
                 <p className="mt-10">
-                  <span className="text-lg sm:text-xl text-gray">
+                  <span className="text-lg sm:text-xl text-gray ">
                     We firmly believe that actions speak louder than words, and
                     we are determined to turn our vision into reality. Once we
                     accomplish what we have planned, we will proudly unveil a
@@ -146,7 +146,7 @@ const AboutPage: React.FC = () => {
                   </span>
                 </p>{' '}
                 <p className="mt-10">
-                  <span className="text-lg sm:text-xl text-gray">
+                  <span className="text-lg sm:text-xl text-gray ">
                     We invite you to join us on this extraordinary journey and
                     be a part of making our vision come true. We combine hard
                     work and smart strategies to make things happen, and we are
@@ -154,7 +154,7 @@ const AboutPage: React.FC = () => {
                   </span>
                 </p>{' '}
                 <p className="mt-10">
-                  <span className="text-lg sm:text-xl text-gray">
+                  <span className="text-lg sm:text-xl text-gray ">
                     Together, let's create a future where possibilities know no
                     bounds. Join us at dunolabs and witness the power of
                     determination and innovation.

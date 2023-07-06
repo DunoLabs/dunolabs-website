@@ -55,7 +55,7 @@ const OurServices: React.FC = () => {
           <div className="flex flex-wrap items-center justify-between mt-10">
             <div className="w-full h-full mb-10 sm:w-3/5">
               <p>
-                <span className="text-lg text-zinc-900 sm:text-lg text-gray">
+                <span className="text-lg text-zinc-900 sm:text-lg text-gray ">
                   01 / 03
                 </span>
               </p>

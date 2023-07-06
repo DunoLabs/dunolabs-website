@@ -18,7 +18,7 @@ const Contact = () => {
             <HeadingBanner
               title="Connect and Make It Happen!"
               className="mt-10 text-zinc-50">
-              <p className="mt-10 text-lg sm:text-xl text-gray">
+              <p className="mt-10 text-lg sm:text-xl text-gray ">
                 If you have a specific project, a rough idea, or a belief in a
                 partnership that you want to discuss with us,{' '}
                 <span>
@@ -33,7 +33,7 @@ const Contact = () => {
               </p>
 
               <div className="my-10 contact-info">
-                <p className="mt-2 text-lg uppercase sm:text-xl text-gray">
+                <p className="mt-2 text-lg uppercase sm:text-xl text-gray ">
                   Email:{' '}
                   <Link
                     href={`mailto:dunolabs@gmail.com`}
@@ -42,7 +42,7 @@ const Contact = () => {
                     dunolabs@gmail.com
                   </Link>
                 </p>{' '}
-                <p className="mt-2 text-lg uppercase sm:text-xl text-gray">
+                <p className="mt-2 text-lg uppercase sm:text-xl text-gray ">
                   Phone:{' '}
                   <Link
                     href={`tel:8103241455`}
@@ -51,7 +51,7 @@ const Contact = () => {
                     +91 8103241455
                   </Link>
                 </p>{' '}
-                <p className="mt-2 text-lg uppercase sm:text-xl text-gray">
+                <p className="mt-2 text-lg uppercase sm:text-xl text-gray ">
                   Address:{' '}
                   <Link
                     href={`https://www.google.com/maps?output=search&q=indore+india&entry=mc&sa=X&ved=2ahUKEwjBytadksT_AhVGxDgGHcF_DyoQ0pQJegQIDRAB`}
@@ -61,7 +61,7 @@ const Contact = () => {
                   </Link>
                 </p>
               </div>
-              <p className="mt-10 text-lg sm:text-xl text-gray">
+              <p className="mt-10 text-lg sm:text-xl text-gray ">
                 By the way, you can also send us an email for unpaid
                 pitch-requests.
               </p>
