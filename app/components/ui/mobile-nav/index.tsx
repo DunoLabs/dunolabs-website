@@ -2,8 +2,14 @@
 
 import { cn } from '@/lib/cn';
 import { Menu as HamburgerMenuIcon } from 'lucide-react';
+import { ArrowUpRight as LinkArrowIndentifierIcon } from 'lucide-react';
 import Link from 'next/link';
-import { ButtonHTMLAttributes, MouseEventHandler, useState } from 'react';
+import {
+  ButtonHTMLAttributes,
+  MouseEventHandler,
+  useEffect,
+  useState,
+} from 'react';
 import Button from '../buttons';
 
 interface MobileNavigationProps
@@ -12,7 +18,7 @@ interface MobileNavigationProps
   menuActions: Array<{
     menuHeading: string | React.ReactNode;
     menuHeadingURL?: string;
-    menSubOptions: Array<{
+    menuSubOptions: Array<{
       subOptionHeading: string | React.ReactNode;
       subMenuOptionURL: string;
     }>;
@@ -81,12 +87,36 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
     setIsMenuOpen(!isMenuOpen);
   };
 
+  /**
+   * handler method to constantly look for keyboard events related to
+   * mobile-navigation component. to handle events like ESC, keydown/keyup etc.
+   */
+  const handleMenuKeyboardEvents = function (): void {
+    // checking if the window object is invalid, if yes, do nothing
+    if (typeof window === 'undefined' || !isMenuOpen) return;
+    // checking for multive keyboard events possible inside window instance
+    window.addEventListener('keydown', function (event): void {
+      if (event.key === 'Escape' || event.key === 'Esc') {
+        setIsMenuOpen(false);
+      }
+    });
+  };
+
+  useEffect(() => {
+    // checking if the menu is open, if yes then only perform event driven actions
+    if (isMenuOpen) {
+      // constantly checking at every window event when menu is open
+      handleMenuKeyboardEvents();
+    }
+  });
+
   return (
     <>
       <div
         className={cn(
           'mobile-navigation-body-content-wrapper p-6 fixed rounded-xl bg-zinc-800 transform -translate-x-1/2 bottom-24 left-1/2 md:hidden',
           isMenuOpen ? 'increase-menu-body-size' : 'decrease-menu-body-size',
+          isMenuOpen ? 'visible' : 'hidden',
         )}>
         {menuActions?.map((menuAction, menuActionIndex) => (
           <div
@@ -95,30 +125,37 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
             {!menuAction?.menuHeadingURL ? (
               <h4
                 className={cn(
-                  'menu-action-item-heading text-white font-medium',
+                  'menu-action-item-heading text-white font-medium flex flex-row transition-all items-center justify-start gap-1 hover:text-zinc-200 hover:gap-1.5',
                 )}>
                 {menuAction?.menuHeading}
+                <LinkArrowIndentifierIcon className="w-4 h-4" />
               </h4>
             ) : (
               <Link href={menuAction?.menuHeadingURL}>
                 <h4
                   className={cn(
-                    'menu-action-item-heading text-white font-medium',
+                    'menu-action-item-heading text-white font-medium flex flex-row transition-all items-center justify-start gap-1 hover:text-zinc-200 hover:gap-1.5',
                   )}>
                   {menuAction?.menuHeading}
+                  <LinkArrowIndentifierIcon className="w-4 h-4" />
                 </h4>
               </Link>
             )}
-            <div className={cn("menu-action-item-suboptions-wrapper border-dashed border-l border-zinc-500 my-3 pl-3")}>
-              {menuAction?.menSubOptions?.map((subOption, subOptionIndex) => (
-                <Link href={subOption?.subMenuOptionURL}
+            <div
+              className={cn(
+                'menu-action-item-suboptions-wrapper border-dashed border-l border-zinc-500 my-3 pl-3',
+              )}>
+              {menuAction?.menuSubOptions?.map((subOption, subOptionIndex) => (
+                <Link
+                  href={subOption?.subMenuOptionURL}
                   // closing the menu component when a inline page link is opened
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div 
-                    className={cn("suboption-item-content-wrapper my-4 relative text-sm font-normal text-zinc-500 hover:text-zinc-400 flex flex-row items-center justify-start gap-2")} 
+                  onClick={() => setIsMenuOpen(false)}>
+                  <div
+                    className={cn(
+                      'suboption-item-content-wrapper my-4 relative text-sm font-normal text-zinc-500 hover:text-zinc-400 flex flex-row items-center justify-start gap-2',
+                    )}
                     key={subOptionIndex}>
-                      <div className="w-1.5 h-1.5 rounded-full bg-zinc-500 absolute -left-[15.5px]" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-zinc-500 absolute -left-[15.5px]" />
                     <p className="suboption-item-heading-text-wrapper">
                       {subOption?.subOptionHeading}
                     </p>
@@ -132,7 +169,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
       <Button
         variant={'subtle'}
         className={cn(
-          'mobile-navigation flex flex-row items-center justify-center gap-2 hover:scale-100 p-6 border-4 border-zinc-500 transition-all fixed transform -translate-x-1/2 bottom-8 left-1/2 md:hidden',
+          'mobile-navigation flex flex-row items-center justify-between hover:scale-100 p-6 border-4 border-zinc-500 transition-all fixed transform -translate-x-1/2 bottom-8 left-1/2 md:hidden',
           className,
           isMenuOpen
             ? 'increase-menu-button-size'
@@ -141,12 +178,19 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
             : '',
         )}
         onClick={handleMenuAction}>
-        <span className="mobile-navigation-menu-title-wrapper text-base">
-          {menuTitle}
+        <span className="flex flex-row items-center justify-between gap-2">
+          <span className="mobile-navigation-menu-title-wrapper text-base">
+            {menuTitle}
+          </span>
+          <span className="mobile-navigation-menu-title-leadingIcon-wrapper text-xl">
+            {isMenuOpen ? '🌴' : '🌱'}
+          </span>
         </span>
-        <span className="mobile-navigation-menu-title-leadingIcon-wrapper text-xl">
-          {isMenuOpen ? '🌴' : '🌱'}
-        </span>
+        {isMenuOpen && (
+          <span className="text-xs">
+            <kbd className="bg-zinc-800 p-1 rounded-md">esc</kbd> to close
+          </span>
+        )}
       </Button>
     </>
   );

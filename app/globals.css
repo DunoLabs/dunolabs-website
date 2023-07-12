@@ -156,7 +156,9 @@ body {
   }
   100% {
     width: calc(100% - 24px);
-    height: calc(100% - 240px);
+    height: fit-content;
+    min-height: calc(100% - 560px);
+    max-height: calc(100% - 140px);
   }
 }
 
@@ -171,7 +173,7 @@ body {
 */
 @keyframes decreaseMenuBodySizeAnimation {
   0% {
-    @apply w-[320px] static;
+    @apply w-[320px];
   }
   100% {
     @apply h-[0px] static hidden;

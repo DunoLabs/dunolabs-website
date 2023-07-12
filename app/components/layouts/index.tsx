@@ -16,9 +16,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         menuTitle="menu"
         menuActions={[
           {
+            menuHeading: 'home',
+            menuHeadingURL: '/',
+            menuSubOptions: [],
+          },
+          {
             menuHeading: 'about',
             menuHeadingURL: '/about',
-            menSubOptions: [
+            menuSubOptions: [
               {
                 subOptionHeading: 'who we are',
                 subMenuOptionURL: '/about#who-we-are',
@@ -36,12 +41,31 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {
             menuHeading: 'people',
             menuHeadingURL: '/people',
-            menSubOptions: [
+            menuSubOptions: [
               {
                 subOptionHeading: 'our beliefs',
                 subMenuOptionURL: '/people#who-we-are',
               },
             ],
+          },
+          {
+            menuHeading: 'services',
+            menuHeadingURL: '/services',
+            menuSubOptions: [
+              {
+                subOptionHeading: 'web development',
+                subMenuOptionURL: '/services#web-development',
+              },
+              {
+                subOptionHeading: 'ux & ui design',
+                subMenuOptionURL: '/services#ux-ui-design',
+              },
+            ],
+          },
+          {
+            menuHeading: 'contact us',
+            menuHeadingURL: '/contact',
+            menuSubOptions: [],
           },
         ]}
       />
