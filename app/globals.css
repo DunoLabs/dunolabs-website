@@ -107,13 +107,13 @@ body {
 */
 @keyframes increaseMenuButtonSizeAnimation {
   0% {
-    @apply w-[120px];
+    @apply w-[0];
   }
   50% {
     @apply w-[380px];
   }
   100% {
-    @apply w-[420px];
+    width: calc(100% - 24px);
   }
 }
 
@@ -128,7 +128,7 @@ body {
 */
 @keyframes decreaseMenuButtonSizeAnimation {
   0% {
-    @apply w-[420px];
+    width: calc(100% - 24px);
   }
   50% {
     @apply w-[380px];
@@ -141,4 +141,44 @@ body {
 .decrease-menu-button-size {
   animation: decreaseMenuButtonSizeAnimation 0.3s;
   animation-fill-mode: backwards;
+}
+
+/* 
+  - setting up animation keyframe when the size increases on the menu button toggle
+  - for the menu options content, only to call this classMethod, when the menu has to be open
+*/
+@keyframes increaseMenuBodySizeAnimation {
+  0% {
+    @apply w-[0] h-[0] hidden;
+  }
+  50% {
+    @apply w-[380px] h-[240px] visible;
+  }
+  100% {
+    width: calc(100% - 24px);
+    height: calc(100% - 240px);
+  }
+}
+
+.increase-menu-body-size {
+  animation: increaseMenuBodySizeAnimation 0.3s;
+  animation-fill-mode: forwards;
+}
+
+/* 
+  - setting up animation keyframe when the size decreases on the menu button toggle
+  - for the menu options content, only to call this classMethod, when the menu has to be closed
+*/
+@keyframes decreaseMenuBodySizeAnimation {
+  0% {
+    @apply w-[320px] static;
+  }
+  100% {
+    @apply h-[0px] static hidden;
+  }
+}
+
+.decrease-menu-body-size {
+  animation: decreaseMenuBodySizeAnimation 0.1s;
+  animation-fill-mode: forwards;
 }
