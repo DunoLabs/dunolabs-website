@@ -100,3 +100,45 @@ body {
     opacity: 1;
   }
 }
+
+/* 
+  - setting up animation keyframe when the size increases on menu button toggle 
+  - only to call use this classMethod, when the menu has to be open
+*/
+@keyframes increaseMenuButtonSizeAnimation {
+  0% {
+    @apply w-[120px];
+  }
+  50% {
+    @apply w-[380px];
+  }
+  100% {
+    @apply w-[420px];
+  }
+}
+
+.increase-menu-button-size {
+  animation: increaseMenuButtonSizeAnimation 0.3s;
+  animation-fill-mode: forwards;
+}
+
+/* 
+  - setting up animation keyframe when the size decreases on menu button toggle 
+  - only to call use this classMethod, when the menu has to be closed
+*/
+@keyframes decreaseMenuButtonSizeAnimation {
+  0% {
+    @apply w-[420px];
+  }
+  50% {
+    @apply w-[380px];
+  }
+  100% {
+    @apply w-[120px];
+  }
+}
+
+.decrease-menu-button-size {
+  animation: decreaseMenuButtonSizeAnimation 0.3s;
+  animation-fill-mode: backwards;
+}
