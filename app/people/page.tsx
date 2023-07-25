@@ -108,7 +108,7 @@ const People: React.FC = () => {
         </ViewContainer>
       </div>
 
-      <div className="py-24 bg-zinc-50 sm:py-40">
+      <div className="py-24 bg-zinc-50 sm:py-40" id="who-we-are">
         <ViewContainer>
           <HeadingBanner
             title="We believe sustainable structures thrive when individuals can freely develop their talents in peace."

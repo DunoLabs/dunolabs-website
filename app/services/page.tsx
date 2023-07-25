@@ -23,6 +23,7 @@ interface Service {
 
 interface ServiceItem {
   id: number;
+  name: string;
   title: string;
   description: string;
   services: Service[];
@@ -31,6 +32,7 @@ interface ServiceItem {
 const ServicesItems: ServiceItem[] = [
   {
     id: 1,
+    name: 'web-development',
     title: 'Web Development',
     description:
       'We build websites and web applications that are fast, secure, and easy to manage. We use the latest technologies to build websites that are responsive, mobile-friendly, and SEO optimized.',
@@ -50,6 +52,7 @@ const ServicesItems: ServiceItem[] = [
   },
   {
     id: 2,
+    name: 'ux-ui-design',
     title: 'Ux & Ui Design',
     description:
       'We design beautiful, user-friendly, and easy to use interfaces that are intuitive and engaging. We use the latest design trends, tools, and technologies to create a unique and unforgettable experience for your users.',
@@ -99,8 +102,14 @@ const ComponentData: ComponentData[] = [
   },
 ];
 
-const ServiceItem = ({ title, description, id, services }: ServiceItem) => (
-  <div key={id}>
+const ServiceItem = ({
+  title,
+  name,
+  description,
+  id,
+  services,
+}: ServiceItem) => (
+  <div key={id} id={name}>
     <h3 className="text-3xl font-bold uppercase text-zinc-900">{title}</h3>
     {/* <p className="mt-10">
       <span className="text-lg sm:text-xl text-gray "> {description}</span>
@@ -155,6 +164,7 @@ const Services: React.FC = () => {
                     title={item.title}
                     description={item.description}
                     id={item.id}
+                    name={item.name}
                     services={item.services}
                   />
                 </>

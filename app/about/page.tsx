@@ -94,7 +94,7 @@ const AboutPage: React.FC = () => {
             </div>
           </ViewContainer>
         </div>
-        <div className="py-24 bg-zinc-50 sm:py-40">
+        <div className="py-24 bg-zinc-50 sm:py-40" id="work-culture">
           <ViewContainer>
             <HeadingBanner
               title="Being a part of dunolabs doesn’t feel like working at the office."
@@ -120,14 +120,14 @@ const AboutPage: React.FC = () => {
           </ViewContainer>
         </div>
         <Marquee text="JOIN Now" className="bg-zinc-900 text-zinc-50 " />
-        <div className="py-24 bg-zinc-50 sm:py-40">
+        <div className="py-24 bg-zinc-50 sm:py-40" id="dunolabs-website-bts">
           <ViewContainer>
             <HeadingBanner
               title="Why Dunolabs website is in black/white?"
               className="max-w-4xl mt-10 text-zinc-900">
               <div className="max-w-3xl">
                 <p className="mt-10">
-                  <span className="text-lg sm:text-xl text-gray ">
+                  <span className="text-lg sm:text-xl text-gray">
                     our journey began in mid-2023 with a clear vision and an
                     unwavering commitment. We made a solemn pledge to ourselves,
                     and as a reminder of that vision and pledge, we chose to
