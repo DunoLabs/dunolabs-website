@@ -44,7 +44,7 @@ const menu: MenuCategory[] = [
   },
   {
     title: 'services.',
-    href: '/services'
+    href: '/services',
   },
   // {
   //   title: "work",
