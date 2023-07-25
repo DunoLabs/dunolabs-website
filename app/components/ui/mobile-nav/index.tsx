@@ -149,12 +149,12 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
                 <Link
                   href={subOption?.subMenuOptionURL}
                   // closing the menu component when a inline page link is opened
-                  onClick={() => setIsMenuOpen(false)}>
+                  onClick={() => setIsMenuOpen(false)}
+                  key={subOptionIndex}>
                   <div
                     className={cn(
                       'suboption-item-content-wrapper my-4 relative text-sm font-normal text-zinc-500 hover:text-zinc-400 flex flex-row items-center justify-start gap-2',
-                    )}
-                    key={subOptionIndex}>
+                    )}>
                     <div className="w-1.5 h-1.5 rounded-full bg-zinc-500 absolute -left-[15.5px]" />
                     <p className="suboption-item-heading-text-wrapper">
                       {subOption?.subOptionHeading}
