@@ -37,6 +37,7 @@ const TextAnimation: React.FC<TextAnimationProps> = ({
         observer.unobserve(textRef.current);
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [controls, animationTriggered, threshold]);
 
   const itemVariants: Variants = {
