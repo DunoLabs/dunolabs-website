@@ -102,6 +102,11 @@ const ComponentData: ComponentData[] = [
   },
 ];
 
+export const metadata = {
+  title: 'services',
+  description: 'list of things we love to do & we are good at!',
+};
+
 const ServiceItem = ({
   title,
   name,
@@ -136,7 +141,7 @@ const ServiceItem = ({
 
 const Services: React.FC = () => {
   return (
-    <Layout>
+    <>
       <div className="py-24 sm:py-40">
         <ViewContainer>
           <HeadingBanner
@@ -272,7 +277,7 @@ const Services: React.FC = () => {
 
       <CTA />
       <Footer />
-    </Layout>
+    </>
   );
 };
 

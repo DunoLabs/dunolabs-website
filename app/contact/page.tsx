@@ -1,4 +1,3 @@
-import Layout from '@/components/layouts';
 import Footer from '@/components/layouts/footer';
 import ViewContainer from '@/components/layouts/view-container';
 import Button from '@/components/ui/buttons';
@@ -11,7 +10,7 @@ import Link from 'next/link';
 
 const Contact = () => {
   return (
-    <Layout>
+    <>
       <div className="py-24 bg-zinc-900 sm:py-40">
         <ViewContainer>
           <div className="max-w-3xl">
@@ -22,11 +21,13 @@ const Contact = () => {
                 If you have a specific project, a rough idea, or a belief in a
                 partnership that you want to discuss with us,{' '}
                 <span>
+                  {' '}
+                  @
                   <a
                     href="https://twitter.com/wh0sumit"
                     target={'_blank'}
                     className="border-b-2">
-                    @sumit
+                    sumit
                   </a>
                 </span>{' '}
                 loves to read your mail.
@@ -42,7 +43,7 @@ const Contact = () => {
                     dunolabs@gmail.com
                   </Link>
                 </p>{' '}
-                <p className="mt-2 text-lg uppercase sm:text-xl text-gray ">
+                {/* <p className="mt-2 text-lg uppercase sm:text-xl text-gray ">
                   Phone:{' '}
                   <Link
                     href={`tel:8103241455`}
@@ -50,7 +51,7 @@ const Contact = () => {
                     target="_blank">
                     +91 8103241455
                   </Link>
-                </p>{' '}
+                </p>{' '} */}
                 <p className="mt-2 text-lg uppercase sm:text-xl text-gray ">
                   Address:{' '}
                   <Link
@@ -79,7 +80,7 @@ const Contact = () => {
       <Marquee text="Contact us Now" className="bg-zinc-50 text-zinc-900 " />
       <CTA />
       <Footer />
-    </Layout>
+    </>
   );
 };
 

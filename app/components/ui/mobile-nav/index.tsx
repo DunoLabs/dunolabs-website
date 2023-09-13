@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/cn';
-import { Menu as HamburgerMenuIcon } from 'lucide-react';
+import { Menu as HamburgerMenuIcon, Menu, Wind } from 'lucide-react';
 import { ArrowUpRight as LinkArrowIndentifierIcon } from 'lucide-react';
 import Link from 'next/link';
 import {
@@ -78,14 +78,29 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
    * @paramsType React.MouseEventHandler<HTMLAnchorElement>
    * @returns: nothing as the type is void
    */
+  // ...
   const handleMenuAction = function (
     e: MouseEventHandler<HTMLAnchorElement> | any,
   ): void {
-    // checking if it's the first interaction with the menu-button
     if (!hasInteracted) setHasInteracted(true);
-    // toggling the current menu state
     setIsMenuOpen(!isMenuOpen);
+
+    // Toggle body overflow to prevent background scrolling
+    document.body.style.overflow = isMenuOpen ? 'auto' : 'hidden';
   };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      handleMenuKeyboardEvents();
+      // Disable body scrolling when menu is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Cleanup effect
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isMenuOpen]);
 
   /**
    * handler method to constantly look for keyboard events related to
@@ -114,9 +129,10 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
     <>
       <div
         className={cn(
-          'mobile-navigation-body-content-wrapper p-6 fixed rounded-xl bg-zinc-800 transform -translate-x-1/2 bottom-24 left-1/2 md:hidden',
+          'mobile-navigation-body-content-wrapper p-6 fixed rounded-xl bg-zinc-800 transform -translate-x-1/2 bottom-24 left-1/2 md:hidden ',
           isMenuOpen ? 'increase-menu-body-size' : 'decrease-menu-body-size',
           isMenuOpen ? 'visible' : 'hidden',
+          'max-h-60vh overflow-y-auto', // Added class for scrollability
         )}>
         {menuActions?.map((menuAction, menuActionIndex) => (
           <div
@@ -144,6 +160,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
             <div
               className={cn(
                 'menu-action-item-suboptions-wrapper border-dashed border-l border-zinc-500 my-3 pl-3',
+                'max-h-40vh overflow-y-auto', // Added class for scrollability
               )}>
               {menuAction?.menuSubOptions?.map((subOption, subOptionIndex) => (
                 <Link
@@ -153,7 +170,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
                   key={subOptionIndex}>
                   <div
                     className={cn(
-                      'suboption-item-content-wrapper my-4 relative text-sm font-normal text-zinc-500 hover:text-zinc-400 flex flex-row items-center justify-start gap-2',
+                      'suboption-item-content-wrapper my-4 relative text-sm font-normal text-zinc-400 hover:text-zinc-400 flex flex-row items-center justify-start gap-2',
                     )}>
                     <div className="w-1.5 h-1.5 rounded-full bg-zinc-500 absolute -left-[15.5px]" />
                     <p className="suboption-item-heading-text-wrapper">
@@ -166,32 +183,36 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
           </div>
         ))}
       </div>
-      <Button
-        variant={'subtle'}
-        className={cn(
-          'mobile-navigation flex flex-row items-center justify-between hover:scale-100 p-6 border-4 border-zinc-500 transition-all fixed transform -translate-x-1/2 bottom-8 left-1/2 md:hidden',
-          className,
-          isMenuOpen
-            ? 'increase-menu-button-size'
-            : hasInteracted
-            ? 'decrease-menu-button-size'
-            : '',
-        )}
-        onClick={handleMenuAction}>
-        <span className="flex flex-row items-center justify-between gap-2">
-          <span className="mobile-navigation-menu-title-wrapper text-base">
-            {menuTitle}
+      <div className="flex">
+        <Button
+          variant={'subtle'}
+          className={cn(
+            'mobile-navigation flex flex-row items-center justify-between hover:scale-100 p-6 border-4 border-zinc-500 transition-all fixed transform -translate-x-1/2 bottom-8 left-1/2 md:hidden rounded-xl sm:px-10 w-100  px-7',
+            className,
+            isMenuOpen
+              ? 'increase-menu-button-size'
+              : hasInteracted
+              ? 'decrease-menu-button-size'
+              : '',
+          )}
+          onClick={handleMenuAction}>
+          <span className="flex flex-row items-center justify-between gap-3">
+            <span className="text-base mobile-navigation-menu-title-wrapper">
+              {menuTitle}
+            </span>
+            <span className="mt-1 text-xl mobile-navigation-menu-title-leadingIcon-wrapper">
+              {isMenuOpen ? '' : <Menu className="w-4 h-4 " />}
+            </span>
           </span>
-          <span className="mobile-navigation-menu-title-leadingIcon-wrapper text-xl">
-            {isMenuOpen ? '🌴' : '🌱'}
-          </span>
-        </span>
-        {isMenuOpen && (
-          <span className="text-xs">
-            <kbd className="bg-zinc-800 p-1 rounded-md">esc</kbd> to close
-          </span>
-        )}
-      </Button>
+          {isMenuOpen && (
+            // <span className="text-xs">
+            //   <kbd className="p-1 rounded-md bg-zinc-800 text-zinc-50">esc</kbd>{' '}
+            //   to close
+            // </span>
+            <Menu className="w-4 h-4 " />
+          )}
+        </Button>
+      </div>
     </>
   );
 };

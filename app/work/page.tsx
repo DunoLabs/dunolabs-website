@@ -65,9 +65,9 @@ const CardData: CardProps[] = [
   },
 ];
 
-const People: React.FC = () => {
+const Work: React.FC = () => {
   return (
-    <Layout>
+    <>
       <div className="py-24 bg-zinc-900 sm:py-40">
         <ViewContainer>
           <HeadingBanner
@@ -195,8 +195,8 @@ const People: React.FC = () => {
       </div>
       <CTA />
       <Footer />
-    </Layout>
+    </>
   );
 };
 
-export default People;
+export default Work;
