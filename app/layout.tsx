@@ -7,7 +7,8 @@ export const metadata: Metadata = {
     default: 'dunolabs',
     template: '%s | dunolabs ',
   },
-  description: 'we design & develop products & tools',
+  description:
+    'your go-to software agency for creative design, development, and effective web app marketing. We craft web apps, products, and tools to elevate your online presence.',
 };
 
 export default function RootLayout({
@@ -17,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={'app-container'}>
         <Layout>{children}</Layout>
       </body>
