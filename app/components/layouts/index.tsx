@@ -42,12 +42,12 @@ const menuItems: MenuItem[] = [
     ],
   },
   {
-    menuHeading: 'work',
-    menuHeadingURL: '/work',
+    menuHeading: 'career',
+    menuHeadingURL: '/career',
     menuSubOptions: [
       {
         subOptionHeading: 'our beliefs',
-        subMenuOptionURL: '/work#who-we-are',
+        subMenuOptionURL: '/career#who-we-are',
       },
     ],
   },

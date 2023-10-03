@@ -1,20 +1,31 @@
+import React from 'react';
 import { cn } from '@/lib/cn';
 
-interface Props {
-  text: string;
+interface MarqueeProps {
+  text: string | string[]; // Allow both single text and array of texts
   className?: string;
-  seperator?: string;
+  separator?: string;
 }
 
-const Marquee: React.FC<Props> = ({
+const Marquee: React.FC<MarqueeProps> = ({
   text,
   className = 'text-zinc-900',
-  seperator = '✦',
+  separator = '✦',
 }) => {
+  let repeatedText = '';
+
+  if (typeof text === 'string') {
+    repeatedText = text;
+  } else if (Array.isArray(text)) {
+    repeatedText = text.join(` ${separator} `);
+  }
+
+  repeatedText = `${repeatedText} ${separator} `.repeat(25).trim();
+
   return (
-    <div className={cn(' marquee', className)}>
+    <div className={cn('marquee', className)}>
       <div className="py-4 font-medium uppercase marquee__group">
-        {text.concat(' ', seperator, ' ').repeat(25)}
+        {repeatedText}
       </div>
     </div>
   );

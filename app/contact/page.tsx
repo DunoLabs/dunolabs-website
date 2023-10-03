@@ -30,7 +30,7 @@ const Contact = () => {
                     sumit
                   </a>
                 </span>{' '}
-                loves to read your mail.
+                & team dunolabs loves to read your mail.
               </p>
 
               <div className="my-10 contact-info">

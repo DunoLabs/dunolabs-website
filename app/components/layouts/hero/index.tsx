@@ -1,15 +1,18 @@
 import ViewContainer from '@/components/layouts/view-container';
 const Hero = () => {
   return (
-    <div className="mt-32 sm:mt-40">
+    <div className="mt-32 sm:mt-48">
       <ViewContainer>
-        <h2 className="text-5xl font-extrabold sm:text-8xl loading-text">
-          we&apos;re building the next generation&apos;s micro-saas tools,
-          websites &amp; products.
+        <h2 className="text-4xl font-extrabold uppercase sm:text-8xl loading-text">
+          We craft{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-br from-zinc-400 to-zinc-800">
+            web apps, products, & tools
+          </span>
+          <br /> to elevate your online presence.
         </h2>
-        <p className="w-full my-12 font-semibold sm:my-16 sm:w-2/3 text-md sm:text-2xl text-gray  loading-text">
-          we are a team of passionate developers and designers who are dedicated
-          to creating the best possible user experience.
+        <p className="w-full mt-8 mb-10 font-normal sm:my-12 sm:w-2/4 text-md sm:text-2xl text-zinc-800 loading-text">
+          Your go-to software agency for creative design, development, and
+          effective web app marketing.
         </p>
       </ViewContainer>
     </div>

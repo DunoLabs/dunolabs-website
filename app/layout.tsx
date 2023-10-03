@@ -4,11 +4,11 @@ import Layout from './components/layouts';
 
 export const metadata: Metadata = {
   title: {
-    default: 'dunolabs',
+    default: 'dunolabs | creative software agency',
     template: '%s | dunolabs ',
   },
   description:
-    'your go-to software agency for creative design, development, and effective web app marketing. We craft web apps, products, and tools to elevate your online presence.',
+    'Your go-to software agency for creative design, development, and effective web app marketing. We craft web apps, products, and tools to elevate your online presence.',
 };
 
 export default function RootLayout({

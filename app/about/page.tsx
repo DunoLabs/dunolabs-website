@@ -126,7 +126,11 @@ const AboutPage: React.FC = () => {
           </HeadingBanner>{' '}
         </ViewContainer>
       </div>
-      <Marquee text="JOIN Now" className="bg-zinc-900 text-zinc-50 " />
+      <Marquee
+        text={['Design', 'Development', 'Marketing']}
+        className="text-4xl font-bold bg-gradient-to-r from-zinc-700 to-zinc-900 text-zinc-50"
+        separator="✺"
+      />
       <div className="py-24 bg-zinc-50 sm:py-40" id="dunolabs-website-bts">
         <ViewContainer>
           <HeadingBanner

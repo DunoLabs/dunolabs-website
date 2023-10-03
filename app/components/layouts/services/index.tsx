@@ -15,6 +15,9 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { ArrowUpRight, Asterisk } from 'lucide-react';
+import Button from '@/components/ui/buttons';
+import Link from 'next/link';
 
 interface OurServicesItem {
   title: string;
@@ -51,7 +54,7 @@ const OurServicesList: OurServicesItem[] = [
 const OurServices: React.FC = () => {
   return (
     <>
-      <div className="relative py-24 sm:py-40">
+      <div className="py-24 sm:py-40">
         <ViewContainer>
           <div className="items-center justify-center w-full h-full ">
             <div className="flex flex-wrap items-center justify-between mt-10">
@@ -65,13 +68,13 @@ const OurServices: React.FC = () => {
                   title="Tough challenges? Take it easy! We'll assist you."
                   description="We are a team of passionate developers and designers who are dedicated to creating the best possible user experience for our clients."
                   // Removing services link temporarily
-                  // links={[
-                  //   {
-                  //     text: 'View all services',
-                  //     linkVariant: 'linkDark',
-                  //     href: '/services', // Add the href property
-                  //   },
-                  // ]}
+                  links={[
+                    {
+                      text: 'View all services',
+                      linkVariant: 'linkDark',
+                      href: '/services', // Add the href property
+                    },
+                  ]}
                 />
               </div>
               <div className="sm:w-[28rem] w-full">
@@ -103,6 +106,86 @@ const OurServices: React.FC = () => {
                 </Accordion>
               </div>
             </div>
+          </div>
+        </ViewContainer>
+
+        <ViewContainer className="my-2">
+          <div className="flex flex-col gap-4 my-10 sm:flex-row sm:gap-20">
+            <Card className="relative rounded-3xl bg-gradient-to-tr from-zinc-800 to-zinc-900 h-96 c ">
+              <CardHeader className="p-2">
+                <Asterisk size={50} className="animate-pulse text-zinc-50" />
+              </CardHeader>
+              <CardFooter className="absolute bottom-0 w-full">
+                <div className="flex items-center justify-between min-w-full gap-2">
+                  <div className="heading">
+                    <p className="my-1 text-2xl font-semibold uppercase text-zinc-50">
+                      Design
+                    </p>
+                    <p className=" text-zinc-200">
+                      We design beautiful & functional interfaces, from scratch.
+                    </p>
+                  </div>
+                  <Button
+                    className="p-2 rounded-full"
+                    asChild
+                    variant={'white'}>
+                    <Link href="/contact">
+                      <ArrowUpRight />
+                    </Link>
+                  </Button>
+                </div>
+              </CardFooter>
+            </Card>
+            <Card className="relative rounded-3xl bg-gradient-to-tr from-zinc-800 to-zinc-900 h-96 c ">
+              <CardHeader className="p-2">
+                <Asterisk size={50} className="animate-pulse text-zinc-50" />
+              </CardHeader>
+              <CardFooter className="absolute bottom-0 w-full">
+                <div className="flex items-center justify-between min-w-full gap-2">
+                  <div className="heading">
+                    <p className="my-1 text-2xl font-semibold uppercase text-zinc-50">
+                      Develop
+                    </p>
+                    <p className=" text-zinc-200">
+                      We develop modern web and mobile apps from scratch.
+                    </p>
+                  </div>
+                  <Button
+                    className="p-2 rounded-full"
+                    asChild
+                    variant={'white'}>
+                    <Link href="/contact">
+                      <ArrowUpRight />
+                    </Link>
+                  </Button>
+                </div>
+              </CardFooter>
+            </Card>{' '}
+            <Card className="relative rounded-3xl bg-gradient-to-tr from-zinc-800 to-zinc-900 h-96 c ">
+              <CardHeader className="p-2">
+                <Asterisk size={50} className="animate-pulse text-zinc-50" />
+              </CardHeader>
+              <CardFooter className="absolute bottom-0 w-full">
+                <div className="flex items-center justify-between min-w-full gap-2">
+                  <div className="heading">
+                    <p className="my-1 text-2xl font-semibold uppercase text-zinc-50">
+                      Market
+                    </p>
+                    <p className=" text-zinc-200">
+                      We help you to market your product and services.
+                    </p>
+                  </div>
+                  <Button
+                    className="p-2 rounded-full"
+                    asChild
+                    variant={'white'}>
+                    <Link href="/contact">
+                      <ArrowUpRight />
+                    </Link>
+                  </Button>
+                </div>
+              </CardFooter>
+            </Card>{' '}
           </div>
         </ViewContainer>
       </div>

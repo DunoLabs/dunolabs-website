@@ -273,7 +273,11 @@ const Services: React.FC = () => {
           </div>
         </ViewContainer>
       </div>
-      <Marquee text="Contact Now" />
+      <Marquee
+        text={['Design', 'Development', 'Marketing']}
+        className="text-4xl font-bold bg-gradient-to-r from-zinc-50 to-zinc-200 text-zinc-900"
+        separator="✺"
+      />
 
       <CTA />
       <Footer />

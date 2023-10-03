@@ -15,6 +15,8 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { Url } from 'url';
+import Button from '../buttons';
+import { ArrowUpRight } from 'lucide-react';
 
 interface MenuItem {
   title: string;
@@ -37,10 +39,6 @@ const menu: MenuCategory[] = [
   {
     title: 'about.',
     href: '/about',
-  },
-  {
-    title: 'work.',
-    href: '/work',
   },
   {
     title: 'services.',

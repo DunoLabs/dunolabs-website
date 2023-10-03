@@ -27,7 +27,7 @@ const About: React.FC = () => {
 
       <ViewContainer>
         <div className="absolute  flex items-center py-4 text-zinc-50 rounded-full -top-[2.2rem]">
-          <Button className="left-0 p-4 rounded-full text-zinc-50 bg-zinc-900">
+          <Button className="left-0 p-4 uppercase rounded-full text-zinc-50 bg-gradient-to-tr from-zinc-900 to-zinc-700">
             LET'S FIND OUT MORE ABOUT US
           </Button>
         </div>
@@ -40,13 +40,15 @@ const About: React.FC = () => {
           />
 
           <div className="flex flex-col items-end justify-end">
+            {/* <div className="p-2 border border-zinc-800 rounded-5xl bg-gradient-to-tr from-zinc-800 to-zinc-900"> */}
             <Image
               src="/media/old-macintosh.png"
-              className="transition-all duration-500 grayscale hover:grayscale-0"
+              className="transition-all duration-500 grayscale hover:grayscale-0 rounded-4xl"
               alt="about"
               width={500}
               height={200}
             />
+            {/* </div> */}
             <p className="w-full my-10 text-lg text-zinc-50 sm:w-1/3 text-end">
               <span className="text-lg sm:text-xl text-gray">
                 By putting people first, we aim to create a company that not

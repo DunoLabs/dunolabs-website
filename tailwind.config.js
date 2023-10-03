@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        customBlue: '#2248AB',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: 0 },

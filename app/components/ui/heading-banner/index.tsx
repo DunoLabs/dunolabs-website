@@ -1,10 +1,11 @@
 import { cn } from '@/lib/cn';
-import Link from '@/components/ui/link';
+import CustomLink from '@/components/ui/linkText';
 
 interface LinkType {
   href?: string;
   text: string;
   linkVariant?: 'linkLight' | 'linkDark';
+  external?: boolean;
 }
 
 interface HeadingBannerProps {
@@ -36,13 +37,13 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
       {links &&
         links.map((link, index) => (
           <div className="mt-10" key={index}>
-            <Link
+            <CustomLink
               key={link.href}
               href={link.href}
               size={'lg'}
               variant={link.linkVariant}>
               {link.text}
-            </Link>
+            </CustomLink>
           </div>
         ))}
     </div>

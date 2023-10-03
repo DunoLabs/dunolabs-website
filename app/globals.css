@@ -12,7 +12,7 @@ body {
 
 .marquee {
   --space: 4rem;
-  --duration: 40s;
+  --duration: 400s;
   --gap: var(--space);
 
   display: flex;
@@ -23,7 +23,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   .marquee {
-    --duration: 80s;
+    --duration: 400s;
   }
 }
 
@@ -183,4 +183,23 @@ body {
 .decrease-menu-body-size {
   animation: decreaseMenuBodySizeAnimation 0.1s;
   animation-fill-mode: forwards;
+}
+
+.heading-large {
+  font-size: 13rem;
+  line-height: 1.2;
+}
+
+@media only screen and (max-width: 767px) {
+  .heading-large {
+    font-size: 4rem;
+  }
+}
+
+.rounded-4xl {
+  border-radius: 2rem;
+}
+
+.rounded-5xl {
+  border-radius: 2.5rem;
 }

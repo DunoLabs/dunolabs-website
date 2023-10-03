@@ -1,5 +1,4 @@
 import ViewContainer from '@/components/layouts/view-container';
-import Separator from '@/components/ui/seperator';
 
 import { Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
@@ -23,19 +22,25 @@ const Footer: React.FC = () => {
   return (
     <div className="relative pb-32 sm:pb-10 bg-zinc-900">
       <ViewContainer>
-        <Separator />
+        {/* <Separator /> */}
 
-        {/* <div className="flex flex-wrap items-center justify-center w-full h-full my-5 sm:justify-between sm:w-1/4">
-          {FooterLinks.map((link) => (
-            <Link
-              href={link.link}
-              className="mx-4 text-lg text-zinc-50 hover:text-zinc-100 sm:mx-0 text-start"
-            >
-              {link.title}
-            </Link>
-          ))}
-        </div> */}
-        <div className="flex flex-wrap items-center justify-center w-full h-full mt-4 sm:justify-between">
+        <div className="flex flex-wrap items-center justify-center w-full h-full sm:justify-between ">
+          <Link
+            href="mailto:dunolabs@gmail.com"
+            className="mx-4 text-lg text-zinc-50 hover:text-zinc-100 sm:mx-0 text-start">
+            dunolabs@gmail.com
+          </Link>
+          {/* <div className="gap-4 sm:w-1/4">
+            {FooterLinks.map((link) => (
+              <Link
+                href={link.link}
+                className="text-lg ms-4 text-zinc-50 hover:text-zinc-100 text-start">
+                {link.title}
+              </Link>
+            ))}
+          </div> */}
+        </div>
+        <div className="flex flex-wrap items-center justify-center w-full h-full sm:justify-between">
           <p className="mt-5">
             <span className="text-lg text-zinc-50 sm:text-lg text-gray ">
               Made with 🤍 in India
