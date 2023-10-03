@@ -19,10 +19,10 @@ const Header = () => {
                   className="text-xl font-semibold text-center sm:text-start">
                   dunolabs
                 </Link>
-                <Asterisk
+                {/* <Asterisk
                   size={28}
                   className="mt-1 text-zinc-900 animate-pulse"
-                />
+                /> */}
               </div>
             </div>
 
