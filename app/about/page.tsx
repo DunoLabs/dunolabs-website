@@ -19,30 +19,16 @@ const photos: Photo[] = [
   {
     id: 1,
     title: 'Sumit Singh',
-    description: 'Founder & CEO / Software Engineer',
+    description: 'Founder & CEO',
     image: '/media/team/sumit.jpg',
     twitter: 'http://twitter.com/wh0sumit',
   },
   {
     id: 2,
     title: 'Yash Sehgal',
-    description: 'Engineering Manager',
+    description: 'Engineer',
     image: '/media/team/yash.png',
     twitter: 'http://twitter.com/yashsehgaldev',
-  },
-  {
-    id: 3,
-    title: 'Nash ',
-    description: 'Full-stack Engineer',
-    image: '/media/team/nash.jpeg',
-    twitter: 'https://twitter.com/rouge-kitten404',
-  },
-  {
-    id: 4,
-    title: 'Aastha Shah',
-    description: 'Founders Office (Intern)',
-    image: '/media/team/aastha.jpg',
-    twitter: 'http://twitter.com/aasthaashahh',
   },
 ];
 
