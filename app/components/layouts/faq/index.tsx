@@ -44,7 +44,7 @@ const FAQList: FAQItem[] = [
 
 const FAQ: React.FC = () => {
   return (
-    <div className="relative py-24 sm:py-32">
+    <div className="relative pt-24 sm:pt-32">
       <ViewContainer>
         <div className="flex justify-end max-w-3xl">
           <HeadingBanner

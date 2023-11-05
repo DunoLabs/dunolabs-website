@@ -11,13 +11,13 @@ import Link from 'next/link';
 const Contact = () => {
   return (
     <>
-      <div className="py-24 bg-zinc-900 sm:py-40">
+      <div className="py-24 bg-neutral-900 sm:py-40">
         <ViewContainer>
           <div className="max-w-3xl">
             <HeadingBanner
               title="Connect and Make It Happen!"
-              className="mt-10 text-zinc-50">
-              <p className="mt-10 text-lg sm:text-xl text-gray ">
+              className="mt-10 text-neutral-50">
+              <p className="mt-10 text-lg sm:text-xl text-neutral-400 ">
                 If you have a specific project, a rough idea, or a belief in a
                 partnership that you want to discuss with us,{' '}
                 <span>
@@ -34,35 +34,35 @@ const Contact = () => {
               </p>
 
               <div className="my-10 contact-info">
-                <p className="mt-2 text-lg uppercase sm:text-xl text-gray ">
+                <p className="mt-2 text-lg uppercase sm:text-xl text-neutral-400 ">
                   Email:{' '}
                   <Link
                     href={`mailto:dunolabs@gmail.com`}
-                    className="lowercase border-b-2 text-zinc-50"
+                    className="lowercase border-b-2 text-neutral-50"
                     target="_blank">
                     dunolabs@gmail.com
                   </Link>
                 </p>{' '}
-                {/* <p className="mt-2 text-lg uppercase sm:text-xl text-gray ">
+                {/* <p className="mt-2 text-lg uppercase sm:text-xl text-neutral-400 ">
                   Phone:{' '}
                   <Link
                     href={`tel:8103241455`}
-                    className="text-zinc-50"
+                    className="text-neutral-50"
                     target="_blank">
                     +91 8103241455
                   </Link>
                 </p>{' '} */}
-                <p className="mt-2 text-lg uppercase sm:text-xl text-gray ">
+                <p className="mt-2 text-lg uppercase sm:text-xl text-neutral-400 ">
                   Address:{' '}
                   <Link
                     href={`https://www.google.com/maps?output=search&q=indore+india&entry=mc&sa=X&ved=2ahUKEwjBytadksT_AhVGxDgGHcF_DyoQ0pQJegQIDRAB`}
-                    className="lowercase text-zinc-50"
+                    className="lowercase text-neutral-50"
                     target="_blank">
                     Indore, India
                   </Link>
                 </p>
               </div>
-              <p className="mt-10 text-lg sm:text-xl text-gray ">
+              <p className="mt-10 text-lg sm:text-xl text-neutral-400 ">
                 By the way, you can also send us an email for unpaid
                 pitch-requests.
               </p>
@@ -77,7 +77,10 @@ const Contact = () => {
         </ViewContainer>
       </div>
 
-      <Marquee text="Contact us Now" className="bg-zinc-50 text-zinc-900 " />
+      <Marquee
+        text="Contact us Now"
+        className="bg-neutral-50 text-neutral-900 "
+      />
       <CTA />
       <Footer />
     </>

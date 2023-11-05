@@ -2,15 +2,15 @@ import Button from '@/components/ui/buttons';
 import { NavTabs } from '@/components/ui/nav-tabs';
 import ViewContainer from '@/components/layouts/view-container';
 import Fixed from '@/components/layouts/fixed';
-import { ArrowUpRight, Asterisk } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/cn';
-
+import Announcement from '@/components/ui/announcement';
 const Header = () => {
   return (
     <Fixed className={cn('h-fit')}>
       <ViewContainer>
-        <div className="my-5 border-2 rounded-full sm:px-10 w-100 backdrop-blur bg-white/60 px-7 ">
+        <div className="my-5 border-2 rounded-full  sm:px-10 w-100 backdrop-blur bg-white/60 px-7">
           <div className="flex items-center justify-between h-14 sm:h-16 ">
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <div className="flex items-center justify-center ">
@@ -19,10 +19,6 @@ const Header = () => {
                   className="text-xl font-semibold text-center sm:text-start">
                   dunolabs
                 </Link>
-                {/* <Asterisk
-                  size={28}
-                  className="mt-1 text-zinc-900 animate-pulse"
-                /> */}
               </div>
             </div>
 
@@ -40,8 +36,12 @@ const Header = () => {
               className="rounded-full "
               border="default"
               asChild>
-              <Link href="mailto:dunolabs@gmail.com">
-                dunolabs@gmail.com <ArrowUpRight className="ml-1" />
+              <Link
+                href="https://foundersforge.club"
+                target={'_blank'}
+                className="flex items-center justify-center gap-2">
+                community is now live ~ foundersforge.club
+                <ArrowUpRight />
               </Link>
             </Button>
           </div>{' '}
