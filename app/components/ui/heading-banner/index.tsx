@@ -10,7 +10,7 @@ interface LinkType {
 
 interface HeadingBannerProps {
   title: string;
-  color?: 'text-zinc-900' | 'text-zinc-50';
+  color?: 'text-neutral-900' | 'text-neutral-50';
   description?: string;
   links?: LinkType[];
   className?: string;
@@ -19,7 +19,7 @@ interface HeadingBannerProps {
 
 const HeadingBanner: React.FC<HeadingBannerProps> = ({
   title,
-  color = 'text-zinc-900',
+  color = 'text-neutral-900',
   description,
   links,
   className,
@@ -31,7 +31,10 @@ const HeadingBanner: React.FC<HeadingBannerProps> = ({
         {title}
       </h2>
       <p className="mt-10">
-        <span className="text-lg sm:text-xl text-gray "> {description}</span>
+        <span className="text-lg sm:text-xl text-neutral-400 ">
+          {' '}
+          {description}
+        </span>
       </p>
       {children}
       {links &&

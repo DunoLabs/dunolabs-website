@@ -68,14 +68,14 @@ const CardData: CardProps[] = [
 const Work: React.FC = () => {
   return (
     <>
-      <div className="py-24 bg-zinc-900 sm:py-40">
+      <div className="py-24 bg-neutral-900 sm:py-40">
         <ViewContainer>
           <HeadingBanner
             title="Let’s be honest."
-            className="mt-10 text-zinc-50">
+            className="mt-10 text-neutral-50">
             <div className="max-w-3xl">
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray ">
+                <span className="text-lg sm:text-xl text-neutral-400 ">
                   we believe that there&apos;s more to a great company than just
                   flashy perks. Instead of playing HR bingo, we&apos;re focused
                   on delivering real value to our clients. Our team is
@@ -87,7 +87,7 @@ const Work: React.FC = () => {
                 </span>
               </p>
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray ">
+                <span className="text-lg sm:text-xl text-neutral-400 ">
                   We believe that our success is tied to our clients&apos;
                   success, which is why we&apos;re dedicated to building
                   long-term relationships based on trust, transparency, and
@@ -108,14 +108,14 @@ const Work: React.FC = () => {
         </ViewContainer>
       </div>
 
-      <div className="py-24 bg-zinc-50 sm:py-40" id="who-we-are">
+      <div className="py-24 bg-neutral-50 sm:py-40" id="who-we-are">
         <ViewContainer>
           <HeadingBanner
             title="We believe sustainable structures thrive when individuals can freely develop their talents in peace."
-            className="max-w-4xl mt-10 text-zinc-900">
+            className="max-w-4xl mt-10 text-neutral-900">
             <div className="max-w-3xl">
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray ">
+                <span className="text-lg sm:text-xl text-neutral-400 ">
                   You only have one life (unless you&apos;re a cat), so
                   there&apos;s no need to spend your entire week working if you
                   don&apos;t want to. The amount of time you choose to work is
@@ -173,7 +173,7 @@ const Work: React.FC = () => {
           </div>
           <HeadingBanner
             title="No vacancy in the list that fits your needs?"
-            className="max-w-3xl mt-10 text-zinc-900"
+            className="max-w-3xl mt-10 text-neutral-900"
             links={[
               {
                 href: 'https://www.notion.so/wh0sumit/work-dunolabs-e0dbc9782fda45208ed9ab23d9227dc7',
@@ -183,7 +183,7 @@ const Work: React.FC = () => {
             ]}>
             <div className="max-w-3xl">
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray ">
+                <span className="text-lg sm:text-xl text-neutral-400 ">
                   It&apos;s a pity, but of course, you can send us your
                   speculative application to dunolabs@gmail.com or apply via our
                   work page :

@@ -6,8 +6,8 @@ import { ArrowUpRight } from 'lucide-react';
 const LinkVariant = cva(' border-b-2 ', {
   variants: {
     variant: {
-      linkLight: 'text-zinc-50 hover:text-zinc-50 ',
-      linkDark: 'text-zinc-900 hover:text-zinc-900 ',
+      linkLight: 'text-neutral-50 hover:text-neutral-50 ',
+      linkDark: 'text-neutral-900 hover:text-neutral-900 ',
     },
     size: {
       sm: 'text-sm',

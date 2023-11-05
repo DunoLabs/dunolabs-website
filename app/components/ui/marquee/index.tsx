@@ -9,7 +9,7 @@ interface MarqueeProps {
 
 const Marquee: React.FC<MarqueeProps> = ({
   text,
-  className = 'text-zinc-900',
+  className = 'text-neutral-900',
   separator = '✦',
 }) => {
   let repeatedText = '';

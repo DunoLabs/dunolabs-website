@@ -129,7 +129,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
     <>
       <div
         className={cn(
-          'mobile-navigation-body-content-wrapper p-6 fixed rounded-xl bg-zinc-800 transform -translate-x-1/2 bottom-24 left-1/2 md:hidden ',
+          'mobile-navigation-body-content-wrapper p-6 fixed rounded-xl bg-neutral-800 transform -translate-x-1/2 bottom-24 left-1/2 md:hidden ',
           isMenuOpen ? 'increase-menu-body-size' : 'decrease-menu-body-size',
           isMenuOpen ? 'visible' : 'hidden',
           'max-h-60vh overflow-y-auto', // Added class for scrollability
@@ -141,7 +141,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
             {!menuAction?.menuHeadingURL ? (
               <h4
                 className={cn(
-                  'menu-action-item-heading text-white font-medium flex flex-row transition-all items-center justify-start gap-1 hover:text-zinc-200 hover:gap-1.5',
+                  'menu-action-item-heading text-white font-medium flex flex-row transition-all items-center justify-start gap-1 hover:text-neutral-200 hover:gap-1.5',
                 )}>
                 {menuAction?.menuHeading}
                 <LinkArrowIndentifierIcon className="w-4 h-4" />
@@ -150,7 +150,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
               <Link href={menuAction?.menuHeadingURL}>
                 <h4
                   className={cn(
-                    'menu-action-item-heading text-white font-medium flex flex-row transition-all items-center justify-start gap-1 hover:text-zinc-200 hover:gap-1.5',
+                    'menu-action-item-heading text-white font-medium flex flex-row transition-all items-center justify-start gap-1 hover:text-neutral-200 hover:gap-1.5',
                   )}>
                   {menuAction?.menuHeading}
                   <LinkArrowIndentifierIcon className="w-4 h-4" />
@@ -159,7 +159,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
             )}
             <div
               className={cn(
-                'menu-action-item-suboptions-wrapper border-dashed border-l border-zinc-500 my-3 pl-3',
+                'menu-action-item-suboptions-wrapper border-dashed border-l border-neutral-500 my-3 pl-3',
                 'max-h-40vh overflow-y-auto', // Added class for scrollability
               )}>
               {menuAction?.menuSubOptions?.map((subOption, subOptionIndex) => (
@@ -170,9 +170,9 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
                   key={subOptionIndex}>
                   <div
                     className={cn(
-                      'suboption-item-content-wrapper my-4 relative text-sm font-normal text-zinc-400 hover:text-zinc-400 flex flex-row items-center justify-start gap-2',
+                      'suboption-item-content-wrapper my-4 relative text-sm font-normal text-neutral-400 hover:text-neutral-400 flex flex-row items-center justify-start gap-2',
                     )}>
-                    <div className="w-1.5 h-1.5 rounded-full bg-zinc-500 absolute -left-[15.5px]" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-neutral-500 absolute -left-[15.5px]" />
                     <p className="suboption-item-heading-text-wrapper">
                       {subOption?.subOptionHeading}
                     </p>
@@ -187,7 +187,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
         <Button
           variant={'subtle'}
           className={cn(
-            'mobile-navigation flex flex-row items-center justify-between hover:scale-100 p-6 border-4 border-zinc-500 transition-all fixed transform -translate-x-1/2 bottom-8 left-1/2 md:hidden rounded-xl sm:px-10 w-100  px-7',
+            'mobile-navigation flex flex-row items-center justify-between hover:scale-100 p-6 border-4 border-neutral-500 transition-all fixed transform -translate-x-1/2 bottom-8 left-1/2 md:hidden rounded-xl sm:px-10 w-100  px-7',
             className,
             isMenuOpen
               ? 'increase-menu-button-size'
@@ -206,7 +206,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
           </span>
           {isMenuOpen && (
             // <span className="text-xs">
-            //   <kbd className="p-1 rounded-md bg-zinc-800 text-zinc-50">esc</kbd>{' '}
+            //   <kbd className="p-1 rounded-md bg-neutral-800 text-neutral-50">esc</kbd>{' '}
             //   to close
             // </span>
             <Menu className="w-4 h-4 " />
