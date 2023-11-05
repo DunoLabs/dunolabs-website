@@ -87,8 +87,9 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="gap-4 sm:w-1/4">
-            {FooterLinks.map((link) => (
+            {FooterLinks.map((link, index) => (
               <Link
+                key={index}
                 href={link.link}
                 className="text-lg ms-4 text-neutral-50 hover:text-neutral-100 text-start">
                 {link.title}
