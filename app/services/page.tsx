@@ -115,20 +115,20 @@ const ServiceItem = ({
   services,
 }: ServiceItem) => (
   <div key={id} id={name}>
-    <h3 className="text-3xl font-bold uppercase text-zinc-900">{title}</h3>
+    <h3 className="text-3xl font-bold uppercase text-neutral-900">{title}</h3>
     {/* <p className="mt-10">
-      <span className="text-lg sm:text-xl text-gray "> {description}</span>
+      <span className="text-lg sm:text-xl text-neutral-400 "> {description}</span>
     </p> */}
 
     <ul className="px-10 list-disc my-14">
       {services.map((service) => (
         <li
           key={service.title}
-          className="my-5 text-xl text-zinc-800 hover:text-zinc-900 hover:underline ">
+          className="my-5 text-xl text-neutral-800 hover:text-neutral-900 hover:underline ">
           {service.title}
           {service.status === 'new' || service.status === 'coming soon' ? (
             <Badge
-              className="ml-2 uppercase bg-zinc-900 text-zinc-50"
+              className="ml-2 uppercase bg-neutral-900 text-neutral-50"
               variant={'default'}>
               {service.status}
             </Badge>
@@ -146,10 +146,10 @@ const Services: React.FC = () => {
         <ViewContainer>
           <HeadingBanner
             title="list of things we love to do & we are good at!"
-            className="max-w-4xl mt-10 text-zinc-900">
+            className="max-w-4xl mt-10 text-neutral-900">
             <div className="max-w-3xl">
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray">
+                <span className="text-lg sm:text-xl text-neutral-400">
                   Below is a list of things we love to do and we are good at, if
                   you don't see what you are looking for, please{' '}
                   <Link href="/contact" className="border-b-2 ">
@@ -177,26 +177,26 @@ const Services: React.FC = () => {
             </div>
           </div>
           <div className="flex items-center justify-center mt-20">
-            <span className="uppercase text-zinc-900">
+            <span className="uppercase text-neutral-900">
               {new Date().toLocaleDateString('en-US', {
                 month: 'long',
                 year: 'numeric',
               })}
             </span>
-            <Separator className="mx-3 text-zinc-900" />
-            <span className="italic font-semibold text-zinc-900 text-end">
+            <Separator className="mx-3 text-neutral-900" />
+            <span className="italic font-semibold text-neutral-900 text-end">
               don't worry we launching more services soon !
             </span>
           </div>
         </ViewContainer>
       </div>
 
-      <div className="py-10 bg-zinc-900 sm:py-20">
+      <div className="py-10 bg-neutral-900 sm:py-20">
         <ViewContainer>
           <HeadingBanner
             title="Say Goodbye to Average: Elevate Your Brand with Us Today!"
-            color="text-zinc-50"
-            className="max-w-4xl mt-10 text-zinc-50"
+            color="text-neutral-50"
+            className="max-w-4xl mt-10 text-neutral-50"
             links={[
               {
                 text: 'Know more about us',
@@ -206,7 +206,7 @@ const Services: React.FC = () => {
             ]}>
             <div className="max-w-3xl">
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray">
+                <span className="text-lg sm:text-xl text-neutral-400">
                   We hold one principle that remains unwavering: we consistently
                   operate alongside you with a mindset of cooperation and mutual
                   regard. Your ideas will undoubtedly benefit from our valuable
@@ -227,14 +227,14 @@ const Services: React.FC = () => {
                       className="w-full mb-20 border-none shadow-none sm:mb-40 sm:w-9/12 "
                       key={card.id}>
                       <CardHeader>
-                        <CardId className="hidden sm:flex text-zinc-50">
+                        <CardId className="hidden sm:flex text-neutral-50">
                           {card.id}
                         </CardId>
-                        <CardTitle className="mb-3 text-3xl text-zinc-50">
+                        <CardTitle className="mb-3 text-3xl text-neutral-50">
                           {card.title}
                         </CardTitle>
                       </CardHeader>
-                      <CardContent className="mt-3 text-zinc-50">
+                      <CardContent className="mt-3 text-neutral-400">
                         <CardDescription className="text-xl ">
                           {card.description}
                         </CardDescription>
@@ -253,14 +253,14 @@ const Services: React.FC = () => {
                       className="w-full mb-20 border-none shadow-none sm:my-40 sm:w-9/12 "
                       key={card.id}>
                       <CardHeader>
-                        <CardId className="hidden sm:flex text-zinc-50">
+                        <CardId className="hidden sm:flex text-neutral-50">
                           {card.id}
                         </CardId>
-                        <CardTitle className="mb-3 text-3xl text-zinc-50">
+                        <CardTitle className="mb-3 text-3xl text-neutral-50">
                           {card.title}
                         </CardTitle>
                       </CardHeader>
-                      <CardContent className="mt-3 text-zinc-50">
+                      <CardContent className="mt-3 text-neutral-400">
                         <CardDescription className="text-xl ">
                           {card.description}
                         </CardDescription>
@@ -275,7 +275,7 @@ const Services: React.FC = () => {
       </div>
       <Marquee
         text={['Design', 'Development', 'Marketing']}
-        className="text-4xl font-bold bg-gradient-to-r from-zinc-50 to-zinc-200 text-zinc-900"
+        className="text-4xl font-bold bg-gradient-to-r from-neutral-50 to-neutral-200 text-neutral-900"
         separator="✺"
       />
 

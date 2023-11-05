@@ -40,14 +40,14 @@ export const metadata = {
 const AboutPage: React.FC = () => {
   return (
     <>
-      <div className="py-24 bg-zinc-900 sm:py-40">
+      <div className="py-24 bg-neutral-900 sm:py-40">
         <ViewContainer>
           <HeadingBanner
             title="Who We Are: The Crazy Minds Behind the Madness"
-            className="max-w-4xl mt-10 text-zinc-50">
+            className="max-w-4xl mt-10 text-neutral-50">
             <div className="max-w-3xl">
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray ">
+                <span className="text-lg sm:text-xl text-neutral-400 ">
                   We are a group of people who believe that the products can be
                   beauitful and functional at the same time, and that the
                   process of building them can be fun and rewarding for everyone
@@ -73,11 +73,11 @@ const AboutPage: React.FC = () => {
                       className="w-full transition-all duration-300 transform h-70 rounded-xl grayscale hover:scale-105 hover:grayscale-0 "
                     />
                   </Link>
-                  <div className="pt-4 text-zinc-50">
+                  <div className="pt-4 text-neutral-50">
                     <h3 className="text-lg font-semibold uppercase">
                       {photo.title}
                     </h3>
-                    <p className="italic text-md text-zinc-400">
+                    <p className="italic text-md text-neutral-400">
                       {photo.description}
                     </p>
                   </div>
@@ -87,21 +87,21 @@ const AboutPage: React.FC = () => {
           </div>
         </ViewContainer>
       </div>
-      <div className="py-24 bg-zinc-50 sm:py-40" id="work-culture">
+      <div className="py-24 bg-neutral-50 sm:py-40" id="work-culture">
         <ViewContainer>
           <HeadingBanner
             title="Being a part of dunolabs doesn’t feel like working at the office."
-            className="max-w-4xl mt-10 text-zinc-900">
+            className="max-w-4xl mt-10 text-neutral-900">
             <div className="max-w-3xl">
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray ">
+                <span className="text-lg sm:text-xl text-neutral-400 ">
                   In fact, it's more like a journey with great friends. On our
                   way to our destination, sometimes we detour to exciting
                   places, but we always keep our shared vision in mind.
                 </span>
               </p>
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray ">
+                <span className="text-lg sm:text-xl text-neutral-400 ">
                   We are a group of people who believe that the products can be
                   beauitful and functional at the same time, and that the
                   process of building them can be fun and rewarding for everyone
@@ -114,17 +114,17 @@ const AboutPage: React.FC = () => {
       </div>
       <Marquee
         text={['Design', 'Development', 'Marketing']}
-        className="text-4xl font-bold bg-gradient-to-r from-zinc-700 to-zinc-900 text-zinc-50"
+        className="text-4xl font-bold bg-gradient-to-r from-neutral-700 to-neutral-900 text-neutral-50"
         separator="✺"
       />
-      <div className="py-24 bg-zinc-50 sm:py-40" id="dunolabs-website-bts">
+      <div className="py-24 bg-neutral-50 sm:py-40" id="dunolabs-website-bts">
         <ViewContainer>
           <HeadingBanner
             title="Why Dunolabs website is in black/white?"
-            className="max-w-4xl mt-10 text-zinc-900">
+            className="max-w-4xl mt-10 text-neutral-900">
             <div className="max-w-3xl">
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray">
+                <span className="text-lg sm:text-xl text-neutral-400">
                   our journey began in mid-2023 with a clear vision and an
                   unwavering commitment. We made a solemn pledge to ourselves,
                   and as a reminder of that vision and pledge, we chose to
@@ -134,7 +134,7 @@ const AboutPage: React.FC = () => {
                 </span>
               </p>
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray ">
+                <span className="text-lg sm:text-xl text-neutral-400 ">
                   We firmly believe that actions speak louder than words, and we
                   are determined to turn our vision into reality. Once we
                   accomplish what we have planned, we will proudly unveil a new
@@ -143,7 +143,7 @@ const AboutPage: React.FC = () => {
                 </span>
               </p>{' '}
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray ">
+                <span className="text-lg sm:text-xl text-neutral-400 ">
                   We invite you to join us on this extraordinary journey and be
                   a part of making our vision come true. We combine hard work
                   and smart strategies to make things happen, and we are
@@ -151,7 +151,7 @@ const AboutPage: React.FC = () => {
                 </span>
               </p>{' '}
               <p className="mt-10">
-                <span className="text-lg sm:text-xl text-gray ">
+                <span className="text-lg sm:text-xl text-neutral-400 ">
                   Together, let's create a future where possibilities know no
                   bounds. Join us at dunolabs and witness the power of
                   determination and innovation.

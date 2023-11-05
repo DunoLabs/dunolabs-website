@@ -60,7 +60,7 @@ const OurServices: React.FC = () => {
             <div className="flex flex-wrap items-center justify-between mt-10">
               <div className="w-full h-full mb-10 sm:w-3/5">
                 <p>
-                  <span className="text-lg text-zinc-900 sm:text-lg text-gray ">
+                  <span className="text-lg text-neutral-900 sm:text-lg ">
                     01 / 03
                   </span>
                 </p>
@@ -92,7 +92,7 @@ const OurServices: React.FC = () => {
                         {item.title}{' '}
                         {item.status === 'coming soon' ? (
                           <Badge
-                            className="ml-2 bg-zinc-900 text-zinc-50"
+                            className="ml-2 bg-neutral-900 text-neutral-50"
                             variant={'default'}>
                             {item.status}
                           </Badge>
@@ -111,17 +111,17 @@ const OurServices: React.FC = () => {
 
         <ViewContainer className="my-2">
           <div className="flex flex-col gap-4 my-10 sm:flex-row sm:gap-20">
-            <Card className="relative rounded-3xl bg-gradient-to-tr from-zinc-800 to-zinc-900 h-96 c ">
+            <Card className="relative rounded-3xl bg-gradient-to-tr from-neutral-800 to-neutral-900 h-96 c ">
               <CardHeader className="p-2">
-                <Asterisk size={50} className="animate-pulse text-zinc-50" />
+                <Asterisk size={50} className="animate-pulse text-neutral-50" />
               </CardHeader>
               <CardFooter className="absolute bottom-0 w-full">
                 <div className="flex items-center justify-between min-w-full gap-2">
                   <div className="heading">
-                    <p className="my-1 text-2xl font-semibold uppercase text-zinc-50">
+                    <p className="my-1 text-2xl font-semibold uppercase text-neutral-50">
                       Design
                     </p>
-                    <p className=" text-zinc-200">
+                    <p className=" text-neutral-200">
                       We design beautiful & functional interfaces, from scratch.
                     </p>
                   </div>
@@ -136,17 +136,17 @@ const OurServices: React.FC = () => {
                 </div>
               </CardFooter>
             </Card>
-            <Card className="relative rounded-3xl bg-gradient-to-tr from-zinc-800 to-zinc-900 h-96 c ">
+            <Card className="relative rounded-3xl bg-gradient-to-tr from-neutral-800 to-neutral-900 h-96 c ">
               <CardHeader className="p-2">
-                <Asterisk size={50} className="animate-pulse text-zinc-50" />
+                <Asterisk size={50} className="animate-pulse text-neutral-50" />
               </CardHeader>
               <CardFooter className="absolute bottom-0 w-full">
                 <div className="flex items-center justify-between min-w-full gap-2">
                   <div className="heading">
-                    <p className="my-1 text-2xl font-semibold uppercase text-zinc-50">
+                    <p className="my-1 text-2xl font-semibold uppercase text-neutral-50">
                       Develop
                     </p>
-                    <p className=" text-zinc-200">
+                    <p className=" text-neutral-200">
                       We develop modern web and mobile apps from scratch.
                     </p>
                   </div>
@@ -161,17 +161,17 @@ const OurServices: React.FC = () => {
                 </div>
               </CardFooter>
             </Card>{' '}
-            <Card className="relative rounded-3xl bg-gradient-to-tr from-zinc-800 to-zinc-900 h-96 c ">
+            <Card className="relative rounded-3xl bg-gradient-to-tr from-neutral-800 to-neutral-900 h-96 c ">
               <CardHeader className="p-2">
-                <Asterisk size={50} className="animate-pulse text-zinc-50" />
+                <Asterisk size={50} className="animate-pulse text-neutral-50" />
               </CardHeader>
               <CardFooter className="absolute bottom-0 w-full">
                 <div className="flex items-center justify-between min-w-full gap-2">
                   <div className="heading">
-                    <p className="my-1 text-2xl font-semibold uppercase text-zinc-50">
+                    <p className="my-1 text-2xl font-semibold uppercase text-neutral-50">
                       Market
                     </p>
-                    <p className=" text-zinc-200">
+                    <p className=" text-neutral-200">
                       We help you to market your product and services.
                     </p>
                   </div>
